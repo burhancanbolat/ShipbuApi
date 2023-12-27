@@ -1,0 +1,6 @@
+@Shipbu_HostAddress = http://localhost:5211
+
+GET {{Shipbu_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
