@@ -42,6 +42,7 @@ namespace MigrationsMySQL.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     DateCreated = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     Enabled = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    RefreshToken = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci"),
                     UserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     NormalizedUserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true)
@@ -72,15 +73,61 @@ namespace MigrationsMySQL.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "RefreshTokens",
+                name: "TransportOrderItemContainerTypes",
                 columns: table => new
                 {
-                    UserId = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
-                    Token = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci")
+                    Id = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
+                    NameTr = table.Column<string>(type: "varchar(255)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    NameEn = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RefreshTokens", x => new { x.UserId, x.Token });
+                    table.PrimaryKey("PK_TransportOrderItemContainerTypes", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "TransportOrderItemFeatures",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
+                    Enabled = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    Type = table.Column<int>(type: "int", nullable: false),
+                    NameTr = table.Column<string>(type: "varchar(255)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    NameEn = table.Column<string>(type: "varchar(255)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    DescriptionTr = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    DescriptionEn = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TransportOrderItemFeatures", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "TransportStaticPages",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
+                    Enabled = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    LabelTr = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    ContentTr = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    LabelEn = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    ContentEn = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TransportStaticPages", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -205,6 +252,108 @@ namespace MigrationsMySQL.Migrations
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
+            migrationBuilder.CreateTable(
+                name: "TransportOrders",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
+                    Date = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    UserId = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TransportOrders", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_TransportOrders_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "TransportOrderItems",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
+                    TransportOrderId = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
+                    Discriminator = table.Column<string>(type: "varchar(34)", maxLength: 34, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Quantity = table.Column<int>(type: "int", nullable: true),
+                    Weight = table.Column<float>(type: "float", nullable: true),
+                    TransportOrderItemContainerTypeId = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TransportOrderItems", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_TransportOrderItems_TransportOrderItemContainerTypes_Transpo~",
+                        column: x => x.TransportOrderItemContainerTypeId,
+                        principalTable: "TransportOrderItemContainerTypes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_TransportOrderItems_TransportOrders_TransportOrderId",
+                        column: x => x.TransportOrderId,
+                        principalTable: "TransportOrders",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "TransportOrderItemFeatureValue",
+                columns: table => new
+                {
+                    TransportOrderItemId = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
+                    TransportOrderItemFeatureId = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
+                    Attachment = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TransportOrderItemFeatureValue", x => new { x.TransportOrderItemFeatureId, x.TransportOrderItemId });
+                    table.ForeignKey(
+                        name: "FK_TransportOrderItemFeatureValue_TransportOrderItemFeatures_Tr~",
+                        column: x => x.TransportOrderItemFeatureId,
+                        principalTable: "TransportOrderItemFeatures",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_TransportOrderItemFeatureValue_TransportOrderItems_Transport~",
+                        column: x => x.TransportOrderItemId,
+                        principalTable: "TransportOrderItems",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "TransportOrderItemTransportOrderItemFeature",
+                columns: table => new
+                {
+                    TransportOrderItemFeaturesId = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
+                    TransportOrderItemsId = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TransportOrderItemTransportOrderItemFeature", x => new { x.TransportOrderItemFeaturesId, x.TransportOrderItemsId });
+                    table.ForeignKey(
+                        name: "FK_TransportOrderItemTransportOrderItemFeature_TransportOrderIt~",
+                        column: x => x.TransportOrderItemFeaturesId,
+                        principalTable: "TransportOrderItemFeatures",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_TransportOrderItemTransportOrderItemFeature_TransportOrderI~1",
+                        column: x => x.TransportOrderItemsId,
+                        principalTable: "TransportOrderItems",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -241,6 +390,49 @@ namespace MigrationsMySQL.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TransportOrderItemContainerTypes_NameTr",
+                table: "TransportOrderItemContainerTypes",
+                column: "NameTr",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TransportOrderItemFeatureValue_TransportOrderItemId",
+                table: "TransportOrderItemFeatureValue",
+                column: "TransportOrderItemId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TransportOrderItemFeatures_NameEn",
+                table: "TransportOrderItemFeatures",
+                column: "NameEn",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TransportOrderItemFeatures_NameTr",
+                table: "TransportOrderItemFeatures",
+                column: "NameTr",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TransportOrderItemTransportOrderItemFeature_TransportOrderIt~",
+                table: "TransportOrderItemTransportOrderItemFeature",
+                column: "TransportOrderItemsId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TransportOrderItems_TransportOrderId",
+                table: "TransportOrderItems",
+                column: "TransportOrderId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TransportOrderItems_TransportOrderItemContainerTypeId",
+                table: "TransportOrderItems",
+                column: "TransportOrderItemContainerTypeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TransportOrders_UserId",
+                table: "TransportOrders",
+                column: "UserId");
         }
 
         /// <inheritdoc />
@@ -262,10 +454,28 @@ namespace MigrationsMySQL.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "RefreshTokens");
+                name: "TransportOrderItemFeatureValue");
+
+            migrationBuilder.DropTable(
+                name: "TransportOrderItemTransportOrderItemFeature");
+
+            migrationBuilder.DropTable(
+                name: "TransportStaticPages");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "TransportOrderItemFeatures");
+
+            migrationBuilder.DropTable(
+                name: "TransportOrderItems");
+
+            migrationBuilder.DropTable(
+                name: "TransportOrderItemContainerTypes");
+
+            migrationBuilder.DropTable(
+                name: "TransportOrders");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

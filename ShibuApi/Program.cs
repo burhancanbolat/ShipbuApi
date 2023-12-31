@@ -55,7 +55,6 @@ builder.Services.AddIdentity<User, Role>(options =>
 
 
 builder.Services
-
     .AddAuthentication(options =>
     {
         options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -91,7 +90,6 @@ builder.Services.AddMailKit(optionBuilder =>
         Security = builder.Configuration.GetValue<bool>("EMail:SslEnabled")
     });
 });
-
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

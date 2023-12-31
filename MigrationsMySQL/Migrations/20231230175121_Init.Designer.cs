@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ShipbuData;
 
@@ -10,9 +11,11 @@ using ShipbuData;
 namespace MigrationsMySQL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231230175121_Init")]
+    partial class Init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -195,12 +198,6 @@ namespace MigrationsMySQL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
-                    b.Property<int>("DisplayOrder")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("Enabled")
-                        .HasColumnType("tinyint(1)");
-
                     b.Property<string>("NameEn")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -223,12 +220,6 @@ namespace MigrationsMySQL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
-                    b.Property<string>("AttachmentDescriptionEn")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("AttachmentDescriptionTr")
-                        .HasColumnType("longtext");
-
                     b.Property<string>("DescriptionEn")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -236,9 +227,6 @@ namespace MigrationsMySQL.Migrations
                     b.Property<string>("DescriptionTr")
                         .IsRequired()
                         .HasColumnType("longtext");
-
-                    b.Property<int>("DisplayOrder")
-                        .HasColumnType("int");
 
                     b.Property<bool>("Enabled")
                         .HasColumnType("tinyint(1)");
@@ -297,9 +285,6 @@ namespace MigrationsMySQL.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("DisplayOrder")
-                        .HasColumnType("int");
-
                     b.Property<bool>("Enabled")
                         .HasColumnType("tinyint(1)");
 
@@ -310,9 +295,6 @@ namespace MigrationsMySQL.Migrations
                     b.Property<string>("LabelTr")
                         .IsRequired()
                         .HasColumnType("longtext");
-
-                    b.Property<int>("Views")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

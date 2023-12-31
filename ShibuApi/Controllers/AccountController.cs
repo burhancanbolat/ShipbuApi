@@ -45,10 +45,8 @@ namespace Shipbu.Controllers
         private async Task<string> GenerateTokenForUser(User user)
         {
             var refreshToken = Guid.NewGuid();
-            await context.RefreshTokens.Where(p => p.UserId == user.Id).ExecuteDeleteAsync();
-            await context.RefreshTokens.AddAsync(new RefreshToken { UserId = user.Id, Token = refreshToken });
-
-
+            user.RefreshToken = refreshToken;
+            await userManager.UpdateAsync(user);
             var roles = await userManager.GetRolesAsync(user);
 
             var claims = new[]{
@@ -82,9 +80,7 @@ namespace Shipbu.Controllers
             var result = await signInManager.PasswordSignInAsync(model.UserName, model.Password, true, false);
             if (result.Succeeded)
             {
-                var user = await context
-                     .Users
-                     .SingleOrDefaultAsync(p => p.UserName == model.UserName);
+                var user = await userManager.FindByNameAsync(model.UserName);
 
                 if (user!.Enabled)
                 {
@@ -93,6 +89,41 @@ namespace Shipbu.Controllers
                 }
             }
             return Ok(new { result });
+        }
+
+        [HttpPost("refreshtoken")]
+        public async Task<IActionResult> RefreshToken(string token)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            SecurityToken validatedToken;
+
+            tokenHandler.ValidateToken(token, new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(configuration.GetValue<string>("Security:Secret")!)),
+                ValidateLifetime = false,
+                ValidateAudience = false,
+                ValidateIssuer = false,
+                ClockSkew = TimeSpan.Zero
+            }, out validatedToken);
+
+            if (validatedToken == null)
+                return BadRequest();
+
+            var user = await userManager.Users.SingleOrDefaultAsync(u => u.RefreshToken.ToString() == token);
+
+            return Ok(new { token = await GenerateTokenForUser(user) });
+        }
+
+        [HttpGet("signout")]
+        [Authorize]
+        public async Task<IActionResult> Revoke()
+        {
+
+            var user = await userManager.GetUserAsync(User);
+            user!.RefreshToken = null;
+            await userManager.UpdateAsync(user);
+            return Ok();
         }
 
         [AllowAnonymous, HttpPost("addpassword")]

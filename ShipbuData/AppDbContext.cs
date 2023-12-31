@@ -17,7 +17,13 @@ public class AppDbContext : IdentityDbContext<User, Role, Guid>
         builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         base.OnModelCreating(builder);
     }
-    
-    public DbSet<RefreshToken>  RefreshTokens { get; set; }
+
+    public DbSet<TransportOrder> TransportOrders { get; set; }
+    public DbSet<TransportOrderItem>  TransportOrderItems { get; set; }
+    public DbSet<TransportOrderItemContainerType>  TransportOrderItemContainerTypes { get; set; }
+    public DbSet<TransportOrderItemFeature> TransportOrderItemFeatures { get; set; }
+    public DbSet<TransportStaticPage> TransportStaticPages { get; set; }
+
+
 
 }
