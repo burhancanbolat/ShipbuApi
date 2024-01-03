@@ -23,7 +23,6 @@ public class AppDbContext : IdentityDbContext<User, Role, Guid>
     public DbSet<TransportOrderItemContainerType>  TransportOrderItemContainerTypes { get; set; }
     public DbSet<TransportOrderItemFeature> TransportOrderItemFeatures { get; set; }
     public DbSet<TransportStaticPage> TransportStaticPages { get; set; }
-
-
+    public DbSet<TransportAcademyVideo> TransportAcademyVideos { get; set; }
 
 }
