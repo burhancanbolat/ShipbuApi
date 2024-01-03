@@ -49,8 +49,8 @@ namespace ShipbuApi.Controllers
                 Enabled = model.Enabled,
                 NameTr = model.NameTr,
                 NameEn = model.NameEn,
-                DescriptionTr = model.DedcriptionTr,
-                DescriptionEn = model.DedcriptionEn,
+                DescriptionTr = model.DescriptionTr,
+                DescriptionEn = model.DescriptionEn,
                 Url = model.Url,
                 ImageUrl = model.ImageUrl,
                 DisplayOrder = (context.TransportAcademyVideos.OrderByDescending(p => p.DisplayOrder).FirstOrDefault()?.DisplayOrder ?? 0) + 1,
@@ -78,8 +78,8 @@ namespace ShipbuApi.Controllers
             item.Enabled = model.Enabled;
             item.NameTr = model.NameTr;
             item.NameEn = model.NameEn;
-            item.DescriptionTr = model.DedcriptionTr;
-            item.DescriptionEn = model.DedcriptionEn;
+            item.DescriptionTr = model.DescriptionTr;
+            item.DescriptionEn = model.DescriptionEn;
             item.Url = model.Url;
             item.ImageUrl = model.ImageUrl;
             item.DisplayOrder = model.DisplayOrder;

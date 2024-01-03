@@ -22,7 +22,7 @@ namespace ShipbuApi.Controllers
             this.context = context;
         }
 
-        [HttpGet]
+        [HttpGet, AllowAnonymous]
         public async Task<IActionResult> Get(DataSourceLoadOptions options)
         {
             var query = context.TransportStaticPages;
