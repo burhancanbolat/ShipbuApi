@@ -66,7 +66,7 @@ namespace ShipbuApi.Controllers
             }
             catch (DbUpdateException)
             {
-                return Ok(new AppApiResponse { Succeded = false, Message = "Aynı isimli briden fazla kayıt olduğundan işlem yapılamıyor!" });
+                return Ok(new AppApiResponse { Succeded = false, Message = "Aynı isimli birden fazla kayıt olduğundan işlem yapılamıyor!" });
             }
         }
 
@@ -95,7 +95,7 @@ namespace ShipbuApi.Controllers
             }
             catch (DbUpdateException)
             {
-                return Ok(new AppApiResponse { Succeded = false, Message = "Aynı isimli briden fazla kayıt olduğundan işlem yapılamıyor!" });
+                return Ok(new AppApiResponse { Succeded = false, Message = "Aynı isimli birden fazla kayıt olduğundan işlem yapılamıyor!" });
             }
         }
 
@@ -129,7 +129,7 @@ namespace ShipbuApi.Controllers
             }
             catch (DbUpdateException)
             {
-                return Ok(new AppApiResponse { Succeded = false, Message = "Aynı isimli briden fazla kayıt olduğundan işlem yapılamıyor!" });
+                return Ok(new AppApiResponse { Succeded = false, Message = "Aynı isimli birden fazla kayıt olduğundan işlem yapılamıyor!" });
             }
         }
 
