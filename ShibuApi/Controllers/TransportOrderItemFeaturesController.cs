@@ -56,6 +56,7 @@ namespace ShipbuApi.Controllers
                 AttachmentDescriptionTr = model.AttachmentDescriptionTr,
                 AttachmentDescriptionEn = model.AttachmentDescriptionEn,
                 Type = model.Type,
+                Fee = model.Fee,
                 DisplayOrder = (context.TransportOrderItemFeatures.OrderByDescending(p => p.DisplayOrder).FirstOrDefault()?.DisplayOrder ?? 0) + 1,
             };
             context.TransportOrderItemFeatures.Add(item);
@@ -84,6 +85,7 @@ namespace ShipbuApi.Controllers
             item.DescriptionTr = model.DescriptionTr;
             item.DescriptionEn = model.DescriptionEn;
             item.Type = model.Type;
+            item.Fee = model.Fee;
             item.AttachmentDescriptionTr = item.AttachmentDescriptionTr;
             item.AttachmentDescriptionEn = item.AttachmentDescriptionEn;
             item.DisplayOrder = model.DisplayOrder;

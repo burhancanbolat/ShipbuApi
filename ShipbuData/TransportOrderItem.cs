@@ -33,6 +33,9 @@ public class TransportOrderItemPallet : TransportOrderItem
     public float Length { get; set; }
     public float Height { get; set; }
     public string? Content { get; set; }
+    public bool HasAddress { get; set; }
+    public string? Address { get; set; }
+
 }
 
 public class TransportOrderItemContainer : TransportOrderItem

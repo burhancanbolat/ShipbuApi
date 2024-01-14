@@ -6,6 +6,7 @@ public class TransportOrderItemFeatureViewModel
 {
     public bool Enabled { get; set; }
     public FeatureAttachmentType Type { get; set; }
+    public decimal Fee { get; set; }
     public string NameTr { get; set; }
     public string NameEn { get; set; }
     public string DescriptionTr { get; set; }
