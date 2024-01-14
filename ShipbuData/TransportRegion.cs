@@ -154,8 +154,10 @@ public class TransportMethodEntityTypeConfiguration : IEntityTypeConfiguration<T
         builder
             .HasData(
                 new TransportMethod { Id = Guid.Parse("{7875CC3C-A338-480A-98D8-8D3296575000}"), NameTr = "Uçak", NameEn = "Air", Enabled = true },
-                new TransportMethod { Id = Guid.Parse("{96E1EF5B-916C-4885-AE5B-08A98541E92A}"), NameTr = "Yavaş Gemi", NameEn = "Sea Slow", Enabled = true },
-                new TransportMethod { Id = Guid.Parse("{CBF432C2-FD9E-4618-9B8F-60BE075BEEF1}"), NameTr = "Hızlı Gemi", NameEn = "Sea Fast", Enabled = true },
+                new TransportMethod { Id = Guid.Parse("{96E1EF5B-916C-4885-AE5B-08A98541E92A}"), NameTr = "Yavaş Gemi + Ekspress", NameEn = "Sea Slow + Express", Enabled = true },
+                new TransportMethod { Id = Guid.Parse("{CBF432C2-FD9E-4618-9B8F-60BE075BEEF1}"), NameTr = "Hızlı Gemi + Ekspress", NameEn = "Sea Fast + Express", Enabled = true },
+                new TransportMethod { Id = Guid.Parse("{2ADD124B-9A78-4B78-96D1-523E658F77A4}"), NameTr = "Yavaş Gemi + TIR", NameEn = "Sea Slow + Truck", Enabled = true },
+                new TransportMethod { Id = Guid.Parse("{4F2FEBE8-3273-4086-89A4-0A0282F003A8}"), NameTr = "Hızlı Gemi + TIR", NameEn = "Sea Fast + Truck", Enabled = true },
                 new TransportMethod { Id = Guid.Parse("{730CD01E-FB25-4347-8932-2B4056252E73}"), NameTr = "Speed Boat", NameEn = "Fast Vessel", Enabled = true },
                 new TransportMethod { Id = Guid.Parse("{AF3E3B1A-06D9-413F-99AD-3378458BE832}"), NameTr = "TIR", NameEn = "Truck", Enabled = true },
                 new TransportMethod { Id = Guid.Parse("{A5FE9692-EF46-4376-919F-43AEAA0C07A0}"), NameTr = "Tren", NameEn = "Railway", Enabled = true }
