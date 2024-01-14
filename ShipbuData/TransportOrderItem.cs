@@ -7,7 +7,10 @@ public abstract class TransportOrderItem
 {
     public Guid Id { get; set; }
     public Guid TransportOrderId { get; set; }
-
+    public bool HasAddress { get; set; }
+    public string? Address { get; set; }
+    public string PhoneNumber { get; set; }
+    public string Name { get; set; }
     public TransportOrder? TransportOrder { get; set; }
     public ICollection<TransportOrderItemFeatureValue> TransportOrderItemFeatureValues { get; set; } = new HashSet<TransportOrderItemFeatureValue>();
     public ICollection<TransportOrderItemFeature> TransportOrderItemFeatures { get; set; } = new HashSet<TransportOrderItemFeature>();
@@ -33,8 +36,7 @@ public class TransportOrderItemPallet : TransportOrderItem
     public float Length { get; set; }
     public float Height { get; set; }
     public string? Content { get; set; }
-    public bool HasAddress { get; set; }
-    public string? Address { get; set; }
+
 
 }
 
