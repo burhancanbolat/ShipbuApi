@@ -21,39 +21,59 @@ namespace ShipbuApi.Controllers
         }
 
         [HttpGet("origins")]
-        public async Task<IActionResult> GetOrigins(DataSourceLoadOptions options)
+        public async Task<IActionResult> GetOrigins()
         {
-            var query = context
+            var result = await context
                 .TransportRegions
-                .Where(p => p.IsOrigin && p.Enabled);
-
-            options.PrimaryKey = new[] { "Id" };
-            options.PaginateViaPrimaryKey = true;
-
-
-            return Ok(await DataSourceLoader.LoadAsync(query, options));
+                .AsNoTracking()
+                .Where(p => p.IsOrigin && p.Enabled)
+                .Select(p => new
+                {
+                    p.Id,
+                    p.NameEn,
+                    p.NameTr,
+                })
+                .ToListAsync();
+            return Ok(result);
         }
 
         [HttpGet("destinations")]
-        public async Task<IActionResult> GetDestinations(DataSourceLoadOptions options)
+        public async Task<IActionResult> GetDestinations()
         {
-            var query = context
+            var result = await context
                 .TransportRegions
-                .Include(p => p.Districts)
+                .AsNoTracking()
                 .Where(p => p.IsDestination && p.Enabled)
                 .Select(p => new
                 {
                     p.Id,
                     p.NameEn,
                     p.NameTr,
-                    Districts = p.Districts.Where(p => p.Enabled).OrderBy(q => q.IsAmazonDepot).Select(q => new { q.Id, q.IsAmazonDepot, q.NameTr, q.NameEn, })
-                });
-
-            options.PrimaryKey = new[] { "Id" };
-            options.PaginateViaPrimaryKey = true;
-
-
-            return Ok(await DataSourceLoader.LoadAsync(query, options));
+                })
+                .ToListAsync();
+            return Ok(result);
         }
+
+        [HttpGet("districts/{regionId:guid}")]
+        public async Task<IActionResult> GetDistricts(Guid regionId)
+        {
+            var result = await context
+                .TransportDistricts
+                .AsNoTracking()
+                .Where(p => p.Enabled && p.RegionId == regionId)
+                .OrderBy(p => p.IsAmazonDepot)
+                .ThenBy(p => p.NameTr)
+                .Select(p => new
+                {
+                    p.Id,
+                    p.NameEn,
+                    p.NameTr,
+                    p.RegionId,
+                    p.IsAmazonDepot
+                })
+                .ToListAsync();
+            return Ok(result);
+        }
+
     }
 }

@@ -267,5 +267,34 @@ namespace Shipbu.Controllers
             var result = await userManager.ConfirmEmailAsync(user, token);
             return Ok(result);
         }
+
+        [HttpPost("transportoffers")]
+        public async Task<IActionResult> GetTransportOffers(TransportOrderViewModel model)
+        {
+            var totalWeight = model.Items.Select(p => new { Desi = ((p.Width ?? 0 * p.Height ?? 0 * p.Length ?? 0) / 6000m) * p.Quantity, Weight = p.Type.Id == 2 ? p.Amount * 1000 : p.Amount }).Sum(p => Math.Max(p.Desi, p.Weight));
+
+            var result = await context
+                .TransportFees
+                .AsNoTracking()
+                .Where(p => p.DistrictId == model.District.Id && p.MinWeight < totalWeight && (p.MaxWeight >= totalWeight || p.MaxWeight == null))
+                .Select(p => new
+                {
+                    p.Id,
+                    p.Value,
+                    MethodNameTr = p.Method!.NameTr,
+                    MethodNameEn = p.Method!.NameEn,
+                    DistrictNameTr = p.District!.NameTr,
+                    DistrictNameEn = p.District!.NameEn,
+                    Price = p.Value * totalWeight,
+                    p.MinWeight,
+                    p.MethodId,
+                    EtaMin = p.Method.TransportRegionMethods.Single(q => q.RegionId == model.Destination).ETAMin,
+                    EtaMax = p.Method.TransportRegionMethods.Single(q => q.RegionId == model.Destination).ETAMax,
+                    EtaDate = DateTime.Today.AddDays(p.Method.TransportRegionMethods.Single(q => q.RegionId == model.Destination).ETAMin ?? 1)
+                })
+                .OrderBy(p => p.Price)
+                .ToListAsync();
+            return Ok(result);
+        }
     }
 }

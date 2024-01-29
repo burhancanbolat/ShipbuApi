@@ -8,6 +8,9 @@ public class TransportOrder
     public Guid Id { get; set; }
     public DateTime Date { get; set; }
     public Guid UserId { get; set; }
+    public string? Address { get; set; }
+    public string? PhoneNumber { get; set; }
+    public string? Name { get; set; }
 
     public User? User { get; set; }
     public ICollection<TransportOrderItem> TransportOrderItems { get; set; } = new HashSet<TransportOrderItem>();
