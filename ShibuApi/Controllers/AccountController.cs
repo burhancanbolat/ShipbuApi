@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using DevExtreme.AspNet.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using NETCore.MailKit.Core;
+using ShipbuApi;
 using ShipbuApi.Models;
 using ShipbuData;
 using System.IdentityModel.Tokens.Jwt;
@@ -273,7 +275,7 @@ namespace Shipbu.Controllers
         {
 
             var transportVolumeWeight = configuration.GetValue<int>("TransportVolumeWeight");
-            var totalWeight = model.Items.Select(p => new { Desi = ((p.Width ?? 0 * p.Height ?? 0 * p.Length ?? 0) / transportVolumeWeight) * p.Quantity, Weight = p.Amount }).Sum(p => Math.Max(p.Desi, p.Weight));
+            var totalWeight = (decimal)(model.Items.Select(p => new { Desi = ((p.Width ?? 0 * p.Height ?? 0 * p.Length ?? 0) / transportVolumeWeight) * p.Quantity, Weight = p.Amount }).Sum(p => Math.Max(p.Desi, p.Weight)));
             var features = model.Items.SelectMany(p => p.Features).GroupBy(p => p.Id).Select(p => new { id = p.Key, fee = p.First().Fee, nameTr = p.First().NameTr, nameEn = p.First().NameEn, amount = p.First().Fee * totalWeight }).ToList();
             var featureAmount = features.Sum(p => p.fee) * totalWeight;
             var result = await context
@@ -302,5 +304,115 @@ namespace Shipbu.Controllers
                 .ToListAsync();
             return Ok(result);
         }
+
+        [HttpPost("transportorder")]
+        [Authorize]
+        public async Task<IActionResult> SetTransportOrder(TransportOrderViewModel model)
+        {
+            var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+
+            var order = new TransportOrder
+            {
+                Address = model.Address,
+                Date = DateTime.UtcNow,
+                TransportFeeId = model.TransportFeeId,
+                DestinationId = model.District.Id,
+                Price = model.Price,
+                Name = model.Name,
+                OriginId = model.Origin,
+                PhoneNumber = model.PhoneNumber,
+                UserId = userId,
+                Status = TransportOrderStatus.Offer,
+                TransportOrderItems = new List<TransportOrderItem>()
+            };
+
+            model.Items.ForEach(p =>
+            {
+                var features = context.TransportOrderItemFeatures.Where(q => p.Features.Select(q => q.Id).Any(r => r == q.Id)).ToList();
+                switch (p.Type.Id)
+                {
+                    case 0:
+                        order.TransportOrderItems.Add(new TransportOrderItemPackage
+                        {
+                            Content = p.Contents,
+                            Height = p.Height!.Value,
+                            Image = p.Image,
+                            Length = p.Length!.Value,
+                            Products = p.Products!.Value,
+                            Quantity = p.Quantity,
+                            Weight = p.Weight,
+                            Width = p.Width!.Value,
+                            TransportOrderItemFeatures = features
+                        });
+                        break;
+                    case 1:
+                        order.TransportOrderItems.Add(new TransportOrderItemPallet
+                        {
+                            Content = p.Contents,
+                            Height = 80,
+                            Image = p.Image,
+                            Length = p.Length!.Value,
+                            Quantity = p.Quantity,
+                            Weight = p.Weight,
+                            Width = 120,
+                            TransportOrderItemFeatures = features
+                        });
+                        break;
+                    case 2:
+                        order.TransportOrderItems.Add(new TransportOrderItemContainer
+                        {
+                            Image = p.Image,
+                            Quantity = p.Quantity,
+                            Weight = p.Weight,
+                            TransportOrderItemContainerTypeId = p.ContainerType!.Id,
+                            TransportOrderItemFeatures = features
+                        });
+                        break;
+                }
+            });
+
+            context.TransportOrders.Add(order);
+            await context.SaveChangesAsync();
+            return Ok();
+        }
+
+        [HttpGet("orders")]
+        [Authorize]
+        public async Task<IActionResult> GetTransportOrders(DataSourceLoadOptions options)
+        {
+            var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+
+            var query = context
+                .TransportOrders
+                .Include(p => p.Origin)
+                .Include(p => p.District)
+                .ThenInclude(p => p.Region)
+                .AsNoTracking()
+                .Where(p => p.UserId == userId)
+                .OrderByDescending(p => p.Date)
+                .Select(p => new
+                {
+                    p.Id,
+                    Date = p.Date.ToLocalTime(),
+                    p.Address,
+                    p.PhoneNumber,
+                    p.Name,
+                    OriginNameTr = p.Origin!.NameTr,
+                    OriginNameEn = p.Origin!.NameEn,
+                    DestinationRegionNameTr = p.District!.Region!.NameTr,
+                    DestinationRegionNameEn = p.District!.Region!.NameEn,
+                    DestinationDistrictNameTr = p.District!.NameTr,
+                    DestinationDistrictNameEn = p.District!.NameEn,
+                    p.District.IsAmazonDepot,
+                    p.Price,
+                    p.Status,
+                    p.ShippingNumber,
+                    p.TrackingNumber
+                });
+            return Ok(await DataSourceLoader.LoadAsync(query,options));
+        }
+
+
+
     }
 }

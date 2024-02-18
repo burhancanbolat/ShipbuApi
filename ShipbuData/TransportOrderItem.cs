@@ -7,6 +7,7 @@ public abstract class TransportOrderItem
 {
     public Guid Id { get; set; }
     public Guid TransportOrderId { get; set; }
+    public string Image { get; set; }
     public TransportOrder? TransportOrder { get; set; }
     public ICollection<TransportOrderItemFeatureValue> TransportOrderItemFeatureValues { get; set; } = new HashSet<TransportOrderItemFeatureValue>();
     public ICollection<TransportOrderItemFeature> TransportOrderItemFeatures { get; set; } = new HashSet<TransportOrderItemFeature>();
@@ -21,7 +22,6 @@ public class TransportOrderItemPackage : TransportOrderItem
     public float Height { get; set; }
     public string? Content { get; set; }
     public int Products { get; set; }
-    public string Image { get; set; }
 }
 
 public class TransportOrderItemPallet : TransportOrderItem

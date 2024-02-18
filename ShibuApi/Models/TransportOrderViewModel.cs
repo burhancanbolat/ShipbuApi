@@ -6,6 +6,11 @@ public class TransportOrderViewModel
     public List<Item> Items { get; set; }
     public Guid Destination { get; set; }
     public Guid Origin { get; set; }
+    public string? Address { get; set; }
+    public string? Name { get; set; }
+    public string? PhoneNumber { get; set; }
+    public Guid TransportFeeId { get; set; }
+    public decimal Price { get; set; }
     public TransportOrderDistrict District { get; set; }
 }
 
@@ -31,16 +36,16 @@ public class TransportOrderDistrict
 
 public class Item
 {
-    public decimal Quantity { get; set; }
-    public decimal Weight { get; set; }
-    public decimal? Height { get; set; }
-    public decimal? Width { get; set; }
-    public decimal? Length { get; set; }
+    public int Quantity { get; set; }
+    public float Weight { get; set; }
+    public float? Height { get; set; }
+    public float? Width { get; set; }
+    public float? Length { get; set; }
     public string Contents { get; set; }
-    public decimal? Products { get; set; }
+    public int? Products { get; set; }
     public List<Feature> Features { get; set; }
     public string Image { get; set; }
-    public decimal Amount { get; set; }
+    public float Amount { get; set; }
     public ContainerType? ContainerType { get; set; }
     public TransportOrderItemType Type { get; set; }
 }

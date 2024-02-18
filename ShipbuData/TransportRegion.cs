@@ -18,6 +18,7 @@ public class TransportRegion
     public ICollection<TransportDistrict> Districts { get; set; } = new HashSet<TransportDistrict>();
     public ICollection<TransportMethod> TransportMethods { get; set; } = new HashSet<TransportMethod>();
     public ICollection<TransportRegionMethod> TransportRegionMethods { get; set; } = new HashSet<TransportRegionMethod>();
+    public ICollection<TransportOrder> TransportOrders { get; set; } = new HashSet<TransportOrder>();
 }
 
 public class TransportRegionEntityTypeConfiguration : IEntityTypeConfiguration<TransportRegion>
@@ -30,6 +31,12 @@ public class TransportRegionEntityTypeConfiguration : IEntityTypeConfiguration<T
             .WithOne(p => p.Region)
             .HasForeignKey(p => p.RegionId)
             .OnDelete(DeleteBehavior.Cascade);
+
+        builder
+            .HasMany(p => p.TransportOrders)
+            .WithOne(p => p.Origin)
+            .HasForeignKey(p => p.OriginId)
+            .OnDelete(DeleteBehavior.Restrict);
 
         builder
             .HasMany(p => p.TransportMethods)
@@ -58,6 +65,7 @@ public class TransportDistrict
     public bool IsAmazonDepot { get; set; }
 
     public TransportRegion? Region { get; set; }
+    public ICollection<TransportOrder> TransportOrders { get; set; } = new HashSet<TransportOrder>();
 
 }
 
@@ -66,6 +74,12 @@ public class TransportDistrictEntityTypeConfiguration : IEntityTypeConfiguration
 
     public void Configure(EntityTypeBuilder<TransportDistrict> builder)
     {
+
+        builder
+            .HasMany(p => p.TransportOrders)
+            .WithOne(p => p.District)
+            .HasForeignKey(p => p.DestinationId)
+            .OnDelete(DeleteBehavior.Cascade);
 
         builder
             .HasData(
@@ -226,6 +240,8 @@ public class TransportFee
 
     public TransportDistrict? District { get; set; }
     public TransportMethod? Method { get; set; }
+
+    public ICollection<TransportOrder> TransportOrders { get; set; } = new HashSet<TransportOrder>();
 }
 
 public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<TransportFee>
@@ -233,6 +249,12 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
 
     public void Configure(EntityTypeBuilder<TransportFee> builder)
     {
+        builder
+            .HasMany(p => p.TransportOrders)
+            .WithOne(p => p.TransportFee)
+            .HasForeignKey(p => p.TransportFeeId)
+            .OnDelete(DeleteBehavior.Restrict);
+
         builder
             .HasData(
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{05BB9082-20A8-4114-946B-CCE72CEDAB19}"), MethodId = Guid.Parse("{7875CC3C-A338-480A-98D8-8D3296575000}"), MinWeight = 0, MaxWeight = null, Value = 10m },
