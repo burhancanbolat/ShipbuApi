@@ -271,8 +271,11 @@ namespace Shipbu.Controllers
         [HttpPost("transportoffers")]
         public async Task<IActionResult> GetTransportOffers(TransportOrderViewModel model)
         {
-            var totalWeight = model.Items.Select(p => new { Desi = ((p.Width ?? 0 * p.Height ?? 0 * p.Length ?? 0) / 6000m) * p.Quantity, Weight = p.Type.Id == 2 ? p.Amount * 1000 : p.Amount }).Sum(p => Math.Max(p.Desi, p.Weight));
 
+            var transportVolumeWeight = configuration.GetValue<int>("TransportVolumeWeight");
+            var totalWeight = model.Items.Select(p => new { Desi = ((p.Width ?? 0 * p.Height ?? 0 * p.Length ?? 0) / transportVolumeWeight) * p.Quantity, Weight = p.Amount }).Sum(p => Math.Max(p.Desi, p.Weight));
+            var features = model.Items.SelectMany(p => p.Features).GroupBy(p => p.Id).Select(p => new { id = p.Key, fee = p.First().Fee, nameTr = p.First().NameTr, nameEn = p.First().NameEn, amount = p.First().Fee * totalWeight }).ToList();
+            var featureAmount = features.Sum(p => p.fee) * totalWeight;
             var result = await context
                 .TransportFees
                 .AsNoTracking()
@@ -285,7 +288,10 @@ namespace Shipbu.Controllers
                     MethodNameEn = p.Method!.NameEn,
                     DistrictNameTr = p.District!.NameTr,
                     DistrictNameEn = p.District!.NameEn,
-                    Price = p.Value * totalWeight,
+                    TransportPrice = (p.Value * totalWeight),
+                    FeaturePrice = featureAmount,
+                    Price = (p.Value * totalWeight) + featureAmount,
+                    Features = features,
                     p.MinWeight,
                     p.MethodId,
                     EtaMin = p.Method.TransportRegionMethods.Single(q => q.RegionId == model.Destination).ETAMin,

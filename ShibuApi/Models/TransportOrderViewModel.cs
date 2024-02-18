@@ -17,6 +17,10 @@ public class ContainerType
 public class Feature
 {
     public Guid Id { get; set; }
+    public decimal Fee { get; set; }
+    public string NameTr { get; set; }
+    public string NameEn { get; set; }
+
     //public string? attachment { get; set; }
     //public string? attachmentFileName { get; set; }
 }
@@ -27,13 +31,13 @@ public class TransportOrderDistrict
 
 public class Item
 {
-    public int Quantity { get; set; }
-    public int Weight { get; set; }
-    public int? Height { get; set; }
-    public int? Width { get; set; }
-    public int? Length { get; set; }
+    public decimal Quantity { get; set; }
+    public decimal Weight { get; set; }
+    public decimal? Height { get; set; }
+    public decimal? Width { get; set; }
+    public decimal? Length { get; set; }
     public string Contents { get; set; }
-    public int? Products { get; set; }
+    public decimal? Products { get; set; }
     public List<Feature> Features { get; set; }
     public string Image { get; set; }
     public decimal Amount { get; set; }

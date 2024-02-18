@@ -12,6 +12,9 @@ public class TransportOrder
     public string? PhoneNumber { get; set; }
     public string? Name { get; set; }
 
+    public Guid Origin { get; set; }
+    public Guid Destination { get; set; }
+
     public User? User { get; set; }
     public ICollection<TransportOrderItem> TransportOrderItems { get; set; } = new HashSet<TransportOrderItem>();
 }
