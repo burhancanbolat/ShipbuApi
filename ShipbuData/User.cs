@@ -12,6 +12,7 @@ public class User : IdentityUser<Guid>
     public Guid? RefreshToken { get; set; }
 
     public ICollection<TransportOrder> TransportOrders { get; set; } = new HashSet<TransportOrder>();
+    public ICollection<TransportPayment> TransportPayments { get; set; } = new HashSet<TransportPayment>();
 
 }
 
@@ -28,5 +29,13 @@ public class UserEntityTypeConfiguration : IEntityTypeConfiguration<User>
             .WithOne(p => p.User)
             .HasForeignKey(p => p.UserId)
             .OnDelete(DeleteBehavior.Restrict);
+        
+        builder
+            .HasMany(p => p.TransportPayments)
+            .WithOne(p => p.User)
+            .HasForeignKey(p => p.UserId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+
     }
 }

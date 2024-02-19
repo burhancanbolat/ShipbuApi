@@ -75,6 +75,18 @@ namespace ShipbuApi.Controllers
             return Ok();
         }
 
+        [HttpGet("updateordershipping/{id}/{shippingNumber}/{trackingNumber}")]
+        public async Task<IActionResult> UpdateOrderShipping(Guid id,string shippingNumber, string trackingNumber)
+        {
+            var order = await context.TransportOrders.FindAsync(id);
+            order.Status = TransportOrderStatus.Shipped;
+            order.ShippingNumber = shippingNumber;
+            order.TrackingNumber = trackingNumber;
+            context.TransportOrders.Update(order);
+            await context.SaveChangesAsync();
+            return Ok();
+        }
+
         [HttpGet("paymentorder/{id}")]
         public async Task<IActionResult> UpdatePaymentOrder(Guid id)
         {
@@ -85,21 +97,21 @@ namespace ShipbuApi.Controllers
             return Ok();
         }
 
-        [HttpGet("shiporder/{id}")]
-        public async Task<IActionResult> UpdateShipOrder(Guid id)
-        {
-            var order = await context.TransportOrders.FindAsync(id);
-            order.Status = TransportOrderStatus.Shipped;
-            context.TransportOrders.Update(order);
-            await context.SaveChangesAsync();
-            return Ok();
-        }
-
         [HttpGet("deliveredorder/{id}")]
         public async Task<IActionResult> UpdateDeliveredOrder(Guid id)
         {
             var order = await context.TransportOrders.FindAsync(id);
             order.Status = TransportOrderStatus.Delivered;
+            context.TransportOrders.Update(order);
+            await context.SaveChangesAsync();
+            return Ok();
+        }
+
+        [HttpGet("cancelorder/{id}")]
+        public async Task<IActionResult> UpdateCancelOrder(Guid id)
+        {
+            var order = await context.TransportOrders.FindAsync(id);
+            order.Status = TransportOrderStatus.Cancelled;
             context.TransportOrders.Update(order);
             await context.SaveChangesAsync();
             return Ok();

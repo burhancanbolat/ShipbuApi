@@ -19,6 +19,7 @@ public class AppDbContext : IdentityDbContext<User, Role, Guid>
     }
 
     public DbSet<TransportOrder> TransportOrders { get; set; }
+    public DbSet<TransportPayment> TransportPayments { get; set; }
     public DbSet<TransportOrderItem> TransportOrderItems { get; set; }
     public DbSet<TransportOrderItemContainerType> TransportOrderItemContainerTypes { get; set; }
     public DbSet<TransportOrderItemFeature> TransportOrderItemFeatures { get; set; }
