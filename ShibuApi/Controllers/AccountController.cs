@@ -409,9 +409,54 @@ namespace Shipbu.Controllers
                     p.ShippingNumber,
                     p.TrackingNumber
                 });
-            return Ok(await DataSourceLoader.LoadAsync(query,options));
+            return Ok(await DataSourceLoader.LoadAsync(query, options));
         }
 
+        [HttpGet("payments")]
+        [Authorize]
+        public async Task<IActionResult> GetPayments(DataSourceLoadOptions options)
+        {
+            var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+
+            var query = context
+                .TransportPayments
+                .AsNoTracking()
+                .Where(p => p.UserId == userId)
+                .OrderByDescending(p => p.Date)
+                .Select(p => new
+                {
+                    p.Id,
+                    Date = p.Date.ToLocalTime(),
+                    p.Amount,
+                });
+            return Ok(await DataSourceLoader.LoadAsync(query, options));
+        }
+
+        [HttpPost("supportmessage")]
+        [Authorize]
+        public async Task<IActionResult> PostSupportMessages(TransportSupportMessageViewModel model)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await userManager.FindByIdAsync(userId!);
+            var html = System.IO.File.ReadAllText(Path.Combine(env.WebRootPath, "Templates", "SupportMessage.html"));
+            var body = string.Format(
+                html,
+                user!.Name,
+                user.UserName,
+                model.Subject,
+                DateTime.UtcNow.ToLocalTime().ToShortDateString(),
+                model.Message
+                );
+            emailService.Send(
+                configuration.GetValue<string>("EMail:UserName"),
+                "Shipbu Kullanıcı Destek Talebi Mesajı",
+                body,
+                isHtml: true);
+
+            return Ok();
+        }
+
+        
 
 
     }

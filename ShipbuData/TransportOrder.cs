@@ -44,6 +44,5 @@ public class TransportOrderEntityTypeConfiguration : IEntityTypeConfiguration<Tr
             .HasForeignKey(p => p.TransportOrderId)
             .OnDelete(DeleteBehavior.Cascade);
 
-
     }
 }

@@ -42,7 +42,8 @@ namespace ShipbuApi.Controllers
 
             options.PrimaryKey = new[] { "Id" };
             options.PaginateViaPrimaryKey = true;
-
+            options.DefaultSort = "Date";
+           
             return Ok(await DataSourceLoader.LoadAsync(query, options));
         }
 
@@ -54,7 +55,7 @@ namespace ShipbuApi.Controllers
             {
                 Amount = model.Amount,
                 UserId = model.UserId,
-                Date = DateTime.UtcNow
+                Date = model.Date
             };
             context.TransportPayments.Add(item);
             await context.SaveChangesAsync();
@@ -65,9 +66,9 @@ namespace ShipbuApi.Controllers
         [HttpPut("{id:guid}")]
         public async Task<IActionResult> Put(Guid id, TransportPaymentViewModel model)
         {
-
             var item = await context.TransportPayments.FindAsync(id);
             item!.Amount = model.Amount;
+            item!.Date = model.Date;
             context.TransportPayments.Update(item);
             await context.SaveChangesAsync();
             return Ok(new AppApiResponse { Succeded = true, Data = item });

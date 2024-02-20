@@ -188,7 +188,7 @@ namespace MigrationsMySQL.Migrations
                     b.HasIndex("NameTr")
                         .IsUnique();
 
-                    b.ToTable("TransportAcademyVideos");
+                    b.ToTable("TransportAcademyVideos", (string)null);
                 });
 
             modelBuilder.Entity("ShipbuData.TransportDistrict", b =>
@@ -218,7 +218,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasIndex("RegionId");
 
-                    b.ToTable("TransportDistricts");
+                    b.ToTable("TransportDistricts", (string)null);
 
                     b.HasData(
                         new
@@ -754,7 +754,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasIndex("MethodId");
 
-                    b.ToTable("TransportFees");
+                    b.ToTable("TransportFees", (string)null);
 
                     b.HasData(
                         new
@@ -1442,7 +1442,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TransportMethods");
+                    b.ToTable("TransportMethods", (string)null);
 
                     b.HasData(
                         new
@@ -1555,7 +1555,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("TransportOrders");
+                    b.ToTable("TransportOrders", (string)null);
                 });
 
             modelBuilder.Entity("ShipbuData.TransportOrderItem", b =>
@@ -1580,7 +1580,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasIndex("TransportOrderId");
 
-                    b.ToTable("TransportOrderItems");
+                    b.ToTable("TransportOrderItems", (string)null);
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("TransportOrderItem");
 
@@ -1612,7 +1612,7 @@ namespace MigrationsMySQL.Migrations
                     b.HasIndex("NameTr")
                         .IsUnique();
 
-                    b.ToTable("TransportOrderItemContainerTypes");
+                    b.ToTable("TransportOrderItemContainerTypes", (string)null);
                 });
 
             modelBuilder.Entity("ShipbuData.TransportOrderItemFeature", b =>
@@ -1663,7 +1663,7 @@ namespace MigrationsMySQL.Migrations
                     b.HasIndex("NameTr")
                         .IsUnique();
 
-                    b.ToTable("TransportOrderItemFeatures");
+                    b.ToTable("TransportOrderItemFeatures", (string)null);
                 });
 
             modelBuilder.Entity("ShipbuData.TransportOrderItemFeatureValue", b =>
@@ -1681,7 +1681,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasIndex("TransportOrderItemId");
 
-                    b.ToTable("TransportOrderItemFeatureValue");
+                    b.ToTable("TransportOrderItemFeatureValue", (string)null);
                 });
 
             modelBuilder.Entity("ShipbuData.TransportPayment", b =>
@@ -1703,7 +1703,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("TransportPayments");
+                    b.ToTable("TransportPayments", (string)null);
                 });
 
             modelBuilder.Entity("ShipbuData.TransportRegion", b =>
@@ -1731,7 +1731,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TransportRegions");
+                    b.ToTable("TransportRegions", (string)null);
 
                     b.HasData(
                         new
@@ -1802,7 +1802,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasIndex("RegionId");
 
-                    b.ToTable("TransportRegionMethod");
+                    b.ToTable("TransportRegionMethod", (string)null);
 
                     b.HasData(
                         new
@@ -1960,7 +1960,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TransportStaticPages");
+                    b.ToTable("TransportStaticPages", (string)null);
                 });
 
             modelBuilder.Entity("ShipbuData.User", b =>
@@ -2053,7 +2053,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasIndex("TransportOrderItemsId");
 
-                    b.ToTable("TransportOrderItemTransportOrderItemFeature");
+                    b.ToTable("TransportOrderItemTransportOrderItemFeature", (string)null);
                 });
 
             modelBuilder.Entity("ShipbuData.TransportOrderItemContainer", b =>
