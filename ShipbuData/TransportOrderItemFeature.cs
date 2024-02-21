@@ -22,7 +22,6 @@ public class TransportOrderItemFeature
     public string? AttachmentDescriptionEn { get; set; }
     public decimal Fee { get; set; } = 0;
 
-    public ICollection<TransportOrderItemFeatureValue> TransportOrderItemFeatureValues { get; set; } = new HashSet<TransportOrderItemFeatureValue>();
     public ICollection<TransportOrderItem> TransportOrderItems { get; set; } = new HashSet<TransportOrderItem>();
 }
 

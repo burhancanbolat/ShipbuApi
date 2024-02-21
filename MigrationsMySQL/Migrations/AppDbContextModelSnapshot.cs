@@ -188,7 +188,7 @@ namespace MigrationsMySQL.Migrations
                     b.HasIndex("NameTr")
                         .IsUnique();
 
-                    b.ToTable("TransportAcademyVideos", (string)null);
+                    b.ToTable("TransportAcademyVideos");
                 });
 
             modelBuilder.Entity("ShipbuData.TransportDistrict", b =>
@@ -218,7 +218,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasIndex("RegionId");
 
-                    b.ToTable("TransportDistricts", (string)null);
+                    b.ToTable("TransportDistricts");
 
                     b.HasData(
                         new
@@ -754,12 +754,12 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasIndex("MethodId");
 
-                    b.ToTable("TransportFees", (string)null);
+                    b.ToTable("TransportFees");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("63cc41c7-b9a1-48e3-a5ec-0b90879b8b87"),
+                            Id = new Guid("dab89f42-2c3f-4d93-aa24-a0d10f6dc089"),
                             DistrictId = new Guid("05bb9082-20a8-4114-946b-cce72cedab19"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -767,7 +767,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("df950df4-db2a-4503-8398-d1878c2bc33c"),
+                            Id = new Guid("04e5d48a-4a7f-4072-bd76-8f289d2dbbe1"),
                             DistrictId = new Guid("05bb9082-20a8-4114-946b-cce72cedab19"),
                             MaxWeight = 70,
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
@@ -776,7 +776,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("54feeda5-0fdc-4514-bc54-725c74f5b82a"),
+                            Id = new Guid("a5a62f7c-db32-434c-a06a-989c1e070acf"),
                             DistrictId = new Guid("05bb9082-20a8-4114-946b-cce72cedab19"),
                             MaxWeight = 100,
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
@@ -785,7 +785,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3000bfdf-ce97-4749-be6b-3dedf7677023"),
+                            Id = new Guid("189a1c7b-4243-4c43-ac9e-f8d235059248"),
                             DistrictId = new Guid("05bb9082-20a8-4114-946b-cce72cedab19"),
                             MaxWeight = 300,
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
@@ -794,7 +794,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cc304083-d65d-44c2-9b6f-af5d16a1b9c8"),
+                            Id = new Guid("762ea0a3-a90d-4db5-93ee-a34e7c2bf2b7"),
                             DistrictId = new Guid("05bb9082-20a8-4114-946b-cce72cedab19"),
                             MaxWeight = 1500,
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
@@ -803,7 +803,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8493e6a9-fa8a-4ecd-9bcf-870169c0e540"),
+                            Id = new Guid("608a33eb-520d-42d5-9a19-1347493eca11"),
                             DistrictId = new Guid("05bb9082-20a8-4114-946b-cce72cedab19"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 1501,
@@ -811,7 +811,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("51785365-0b15-424c-bc01-e12ac21a45df"),
+                            Id = new Guid("5292c147-227d-41c6-981e-e3dd446e6ee8"),
                             DistrictId = new Guid("0c02aa0a-b0d4-477a-b4e9-0a5073d323bf"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -819,7 +819,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("449fb9e9-5d9a-4008-9aac-efe58075e988"),
+                            Id = new Guid("98099be5-4554-460c-8a3a-c6fbc08804c5"),
                             DistrictId = new Guid("0c02aa0a-b0d4-477a-b4e9-0a5073d323bf"),
                             MaxWeight = 70,
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
@@ -828,7 +828,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8dc1d6d3-d0fc-4184-a7ea-b4d23f7278e8"),
+                            Id = new Guid("a1535794-5315-435b-80e9-235d01ee5c39"),
                             DistrictId = new Guid("0c02aa0a-b0d4-477a-b4e9-0a5073d323bf"),
                             MaxWeight = 100,
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
@@ -837,7 +837,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3940e739-b63f-4609-a30e-285d71fe66e3"),
+                            Id = new Guid("17f30cb1-f960-4e9d-846d-6fe5548c1757"),
                             DistrictId = new Guid("0c02aa0a-b0d4-477a-b4e9-0a5073d323bf"),
                             MaxWeight = 300,
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
@@ -846,7 +846,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ae03140d-84d4-4dbd-a450-8bdaec438e46"),
+                            Id = new Guid("557c4d84-0bae-4285-a256-f6edc04d632c"),
                             DistrictId = new Guid("0c02aa0a-b0d4-477a-b4e9-0a5073d323bf"),
                             MaxWeight = 1500,
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
@@ -855,7 +855,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("50f09f4c-f9c9-4dfb-8e3f-03f3b9515aa3"),
+                            Id = new Guid("eb75b5f8-8b87-4aca-a51a-3b1d0a681f63"),
                             DistrictId = new Guid("0c02aa0a-b0d4-477a-b4e9-0a5073d323bf"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 1501,
@@ -863,7 +863,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("99c5d65d-e0e4-4492-b4e6-2e5b2cc6b247"),
+                            Id = new Guid("f8c5c62f-6387-43ae-a0ac-db22d8e34e21"),
                             DistrictId = new Guid("34e425db-ff6c-4ab7-ac14-a1bd7a7c94a8"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -871,7 +871,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8f7dcd9a-6e54-4fd6-9ef6-7688763a8b8f"),
+                            Id = new Guid("12298cfd-f5dd-4b0b-890b-58911230a23b"),
                             DistrictId = new Guid("34e425db-ff6c-4ab7-ac14-a1bd7a7c94a8"),
                             MaxWeight = 70,
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
@@ -880,7 +880,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cfae4637-6006-4732-82e9-b14d95b83306"),
+                            Id = new Guid("2942a071-004a-47f8-9a20-df7444b7e3bd"),
                             DistrictId = new Guid("34e425db-ff6c-4ab7-ac14-a1bd7a7c94a8"),
                             MaxWeight = 100,
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
@@ -889,7 +889,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("15a9a8c2-fbf8-4e16-8309-5aa9c0a0b181"),
+                            Id = new Guid("addb5d94-7c46-4cb8-8a33-e67750a9cdd8"),
                             DistrictId = new Guid("34e425db-ff6c-4ab7-ac14-a1bd7a7c94a8"),
                             MaxWeight = 300,
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
@@ -898,7 +898,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fd5aa624-b492-4928-b020-d7933d552a61"),
+                            Id = new Guid("cf7ac8c4-48ba-4249-a05d-92bb2f0354c5"),
                             DistrictId = new Guid("34e425db-ff6c-4ab7-ac14-a1bd7a7c94a8"),
                             MaxWeight = 1500,
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
@@ -907,7 +907,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("99950430-ddd5-4044-9a97-20346fcb8569"),
+                            Id = new Guid("26971170-d6ef-4fca-8f07-0e044a2a0ada"),
                             DistrictId = new Guid("34e425db-ff6c-4ab7-ac14-a1bd7a7c94a8"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 1501,
@@ -915,7 +915,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9c8663fe-0790-4664-aae0-be0a8321ba12"),
+                            Id = new Guid("6ae3cd0b-670f-4646-a1a6-402f6d5b9b3d"),
                             DistrictId = new Guid("2b26b58b-050c-46a7-8567-2325c31fa6fb"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -923,7 +923,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d81d00e2-06ec-4899-b172-72038cd37228"),
+                            Id = new Guid("854ef12e-7cbe-4a73-8afa-090c8a47b633"),
                             DistrictId = new Guid("2b26b58b-050c-46a7-8567-2325c31fa6fb"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 101,
@@ -931,7 +931,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ef3be54c-80c1-4d2d-a8e5-c04743ed7b2f"),
+                            Id = new Guid("92cfa85c-8418-4440-9cc4-bfd181b3e57b"),
                             DistrictId = new Guid("2b26b58b-050c-46a7-8567-2325c31fa6fb"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 101,
@@ -939,7 +939,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8be771e9-c04b-4554-b975-bf36539bf8ec"),
+                            Id = new Guid("a4551a37-3a9b-4404-ad4f-838324791de2"),
                             DistrictId = new Guid("3bf2da8a-0a2c-4a8f-99c9-35742cb7fa2e"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -947,7 +947,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2c836e7e-fdd0-447c-939e-9832f8e9d22a"),
+                            Id = new Guid("23852359-1b68-4dd0-b37e-2501688f88f9"),
                             DistrictId = new Guid("3bf2da8a-0a2c-4a8f-99c9-35742cb7fa2e"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 101,
@@ -955,7 +955,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ffd3d7c6-a2e2-4fea-98e3-515720dbfc8e"),
+                            Id = new Guid("17fd5b7a-896f-4d93-958e-1039e2446345"),
                             DistrictId = new Guid("3bf2da8a-0a2c-4a8f-99c9-35742cb7fa2e"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 101,
@@ -963,7 +963,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("29f88964-654b-421d-add5-883de55ff010"),
+                            Id = new Guid("4bf39ecb-f9f8-4863-9c01-df98222713be"),
                             DistrictId = new Guid("dbe61b00-89ef-493c-8930-9d41a402a987"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -971,7 +971,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("57772395-f575-40ef-840f-bb0ba60dc9e5"),
+                            Id = new Guid("db3b152b-b877-4092-b9fa-b6ab7f5df1a4"),
                             DistrictId = new Guid("dbe61b00-89ef-493c-8930-9d41a402a987"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 101,
@@ -979,7 +979,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fc1c9878-59db-4115-b0a5-3937955a3247"),
+                            Id = new Guid("73c4d86a-6c24-4aa3-839d-0a97e9055f48"),
                             DistrictId = new Guid("dbe61b00-89ef-493c-8930-9d41a402a987"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 101,
@@ -987,7 +987,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ad42ead0-b4bd-480a-baf5-0329c9b5cf28"),
+                            Id = new Guid("c031305c-7806-44e3-a485-5e8d0d783a74"),
                             DistrictId = new Guid("ccd6ecfe-c907-4777-96ad-40ab41b7ac06"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -995,7 +995,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8d596924-2282-4548-8841-14df28aa538a"),
+                            Id = new Guid("6ba1fbaf-83fa-40e1-aa03-36005bfeab1e"),
                             DistrictId = new Guid("ccd6ecfe-c907-4777-96ad-40ab41b7ac06"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 101,
@@ -1003,7 +1003,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e720cdd1-3649-417d-bb65-35a40edcb3ee"),
+                            Id = new Guid("46d876e5-9d11-4ae3-8623-2a7eeb5dd34f"),
                             DistrictId = new Guid("ccd6ecfe-c907-4777-96ad-40ab41b7ac06"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 101,
@@ -1011,7 +1011,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("bc079640-3a9a-4820-8e71-3c0acec7ac65"),
+                            Id = new Guid("8fd8d49a-9920-4eb3-9803-324aa6c2eaee"),
                             DistrictId = new Guid("6d332a8f-0bcd-4b81-9c59-6965f4ab40ae"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -1019,7 +1019,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4187f4f8-6628-46ae-9e32-3f01ab7f37ec"),
+                            Id = new Guid("6e0c1486-8360-4150-865f-7fcb75e7f29e"),
                             DistrictId = new Guid("6d332a8f-0bcd-4b81-9c59-6965f4ab40ae"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 101,
@@ -1027,7 +1027,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9b07612e-b16f-4356-a37e-bb299be5c855"),
+                            Id = new Guid("19a6b9c9-c0bc-40ee-a074-9208ff71f85b"),
                             DistrictId = new Guid("6d332a8f-0bcd-4b81-9c59-6965f4ab40ae"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 101,
@@ -1035,7 +1035,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4ae5bbb0-7fa3-4df7-b8c8-31559f51343f"),
+                            Id = new Guid("72c1cd80-9d36-4ca5-8777-65ee11c26779"),
                             DistrictId = new Guid("76adc0f7-ac5d-43cd-9983-eae135865030"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -1043,7 +1043,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4b621157-5d8d-4f10-9cce-ff9dafb44baf"),
+                            Id = new Guid("cfa6ba4a-405c-4fb5-a35e-a3730251f331"),
                             DistrictId = new Guid("76adc0f7-ac5d-43cd-9983-eae135865030"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 101,
@@ -1051,7 +1051,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f519c316-77d7-4167-8235-320b4cf92319"),
+                            Id = new Guid("7a106dc7-061e-42ea-98fa-2218e2113300"),
                             DistrictId = new Guid("76adc0f7-ac5d-43cd-9983-eae135865030"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 101,
@@ -1059,7 +1059,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("82b1d78d-317c-4462-912c-1c38747ba012"),
+                            Id = new Guid("08d340c8-ff2d-4695-ac87-17dd7e58ed55"),
                             DistrictId = new Guid("80ff3e90-dcb9-4bc3-9590-e3a2c331a0ec"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -1067,7 +1067,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("50e05427-c69f-4bf5-bc62-fab8d79a2fff"),
+                            Id = new Guid("4d598414-f4e3-4fdb-bab8-3a0b33d27406"),
                             DistrictId = new Guid("80ff3e90-dcb9-4bc3-9590-e3a2c331a0ec"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 101,
@@ -1075,7 +1075,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("39b62c5d-0740-4449-a12f-929410ea1edc"),
+                            Id = new Guid("99344f70-c5c2-4b11-b672-08c30301c4c5"),
                             DistrictId = new Guid("72516348-d8e7-4ce3-af4e-f97b77897f89"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -1083,7 +1083,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("72541967-a09c-43e8-8cd3-1e9b01f726c0"),
+                            Id = new Guid("7ea110d7-35db-4dea-8604-5ad6a8bbee74"),
                             DistrictId = new Guid("72516348-d8e7-4ce3-af4e-f97b77897f89"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 101,
@@ -1091,7 +1091,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5f7b7b5f-2939-4610-bcf8-88ba02062baf"),
+                            Id = new Guid("ce26527d-1109-4208-b8a7-cb9f59c74dcb"),
                             DistrictId = new Guid("72516348-d8e7-4ce3-af4e-f97b77897f89"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 101,
@@ -1099,7 +1099,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5ef7bfb9-9c45-4b67-9532-301a86685c46"),
+                            Id = new Guid("78fc5202-c331-499b-8af1-927eb8850110"),
                             DistrictId = new Guid("5f0411d9-fc63-4dd4-a03f-50c26f0829c6"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -1107,7 +1107,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("56ea86d7-34a0-4830-ad46-2a8ca6869ce6"),
+                            Id = new Guid("12c43827-c84c-4618-8fbc-51e542749ef7"),
                             DistrictId = new Guid("5f0411d9-fc63-4dd4-a03f-50c26f0829c6"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 101,
@@ -1115,7 +1115,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7fd4b01e-d016-4f1f-a983-d1ba7be15103"),
+                            Id = new Guid("4da92934-6053-459a-afe1-4f7de9d4a60a"),
                             DistrictId = new Guid("5f0411d9-fc63-4dd4-a03f-50c26f0829c6"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 101,
@@ -1123,7 +1123,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("61f8de64-56a6-42e4-83e1-64dd844d98d7"),
+                            Id = new Guid("2e2b91ca-7702-4411-b7df-32b7f1695733"),
                             DistrictId = new Guid("76e0d1b5-4fb7-4dc7-bcb1-1fadff9acc92"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -1131,7 +1131,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b0751ee0-8204-43f7-807e-a0f00db9d498"),
+                            Id = new Guid("880197a6-4872-4f73-bb10-89c2677a0cdb"),
                             DistrictId = new Guid("76e0d1b5-4fb7-4dc7-bcb1-1fadff9acc92"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 101,
@@ -1139,7 +1139,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("de082b14-2346-4fce-b78c-cae344438893"),
+                            Id = new Guid("c6eceec6-8b0c-4534-9d8b-89cc5a3ba563"),
                             DistrictId = new Guid("76e0d1b5-4fb7-4dc7-bcb1-1fadff9acc92"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 101,
@@ -1147,7 +1147,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5804687f-4d4c-47f7-bfe3-5a8c6f466e09"),
+                            Id = new Guid("f562c765-ba35-4399-acca-23c1d3f08fab"),
                             DistrictId = new Guid("123a8e96-b5f2-4459-a896-da06599036cf"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -1155,7 +1155,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("eccfd794-5e64-4918-a617-aa841c2d5286"),
+                            Id = new Guid("7d67824c-2627-4d68-9ea7-7ce3af98558d"),
                             DistrictId = new Guid("123a8e96-b5f2-4459-a896-da06599036cf"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 101,
@@ -1163,7 +1163,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("83d2e5b8-e838-44d0-9a0f-454821b475f6"),
+                            Id = new Guid("70f5904a-5320-4866-90dd-46acf71450a3"),
                             DistrictId = new Guid("123a8e96-b5f2-4459-a896-da06599036cf"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 101,
@@ -1171,7 +1171,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a7cee56c-23f7-4423-a781-eb830992c220"),
+                            Id = new Guid("e4fb310c-2c0a-42b5-b28d-ca16235ae6ed"),
                             DistrictId = new Guid("98ead996-828c-4a6f-99c2-914b7c8110ef"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -1179,7 +1179,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ebe541c9-cfa2-4f54-91a9-959404b8a93b"),
+                            Id = new Guid("3db133c1-7d66-40ba-bcc2-df6a78a58f0c"),
                             DistrictId = new Guid("98ead996-828c-4a6f-99c2-914b7c8110ef"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 101,
@@ -1187,7 +1187,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e6eb4339-5393-4fe1-8c68-ef5715164afd"),
+                            Id = new Guid("35b7d77a-eb96-42a1-9fd2-72e6bf02ec58"),
                             DistrictId = new Guid("98ead996-828c-4a6f-99c2-914b7c8110ef"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 101,
@@ -1195,7 +1195,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4038e705-8620-4790-9820-b6d8f29ef67f"),
+                            Id = new Guid("53378603-e281-4aed-88e1-38998e330b43"),
                             DistrictId = new Guid("5abcb711-259a-48dc-9817-2e5b988d690a"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -1203,7 +1203,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b262f23e-f820-4cf6-9c4c-cf5690e8720e"),
+                            Id = new Guid("a0746f18-d973-4356-9f5b-28be8ed36fd4"),
                             DistrictId = new Guid("5abcb711-259a-48dc-9817-2e5b988d690a"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 101,
@@ -1211,7 +1211,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("46f82f6c-323f-4b6b-84ac-2bc4d1ddfdf1"),
+                            Id = new Guid("effe178e-34d4-4bf2-ba36-b066dc64ce2e"),
                             DistrictId = new Guid("5abcb711-259a-48dc-9817-2e5b988d690a"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 101,
@@ -1219,7 +1219,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("191c253e-5eef-4c0e-b136-97fc9625c141"),
+                            Id = new Guid("18ff438b-9241-4c1d-a01f-24a247dc9c53"),
                             DistrictId = new Guid("b90943d8-f764-42d3-8fca-da1ba2378634"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -1227,7 +1227,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ac1a3f0d-a563-4104-8098-c5cbcee5f48e"),
+                            Id = new Guid("07deca2d-5cb6-40dc-851c-2023e81e0c49"),
                             DistrictId = new Guid("b90943d8-f764-42d3-8fca-da1ba2378634"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 101,
@@ -1235,7 +1235,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1529196b-0a6e-421b-96bc-c82c2b3da98b"),
+                            Id = new Guid("82330603-03c9-4eb6-91d4-69c04a09f67c"),
                             DistrictId = new Guid("b90943d8-f764-42d3-8fca-da1ba2378634"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 101,
@@ -1243,7 +1243,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e21808f2-b8ad-417b-a8a3-019175fed510"),
+                            Id = new Guid("af137e28-cd70-43ef-a0c1-49937ac54bed"),
                             DistrictId = new Guid("6d63584c-813f-48de-9b19-df143f83d2f7"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -1251,7 +1251,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ac66954b-8749-4eb5-b473-67374baafc26"),
+                            Id = new Guid("d2112068-e17d-48f2-963c-e58a1505c067"),
                             DistrictId = new Guid("6d63584c-813f-48de-9b19-df143f83d2f7"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 101,
@@ -1259,7 +1259,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f1c4c532-0a83-4939-b299-9aeceafdd84a"),
+                            Id = new Guid("3563f464-8016-4556-8dd3-1b831f602764"),
                             DistrictId = new Guid("6d63584c-813f-48de-9b19-df143f83d2f7"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 101,
@@ -1267,7 +1267,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4e7da82b-e21f-477c-b541-69cbd0346abe"),
+                            Id = new Guid("2037cb4a-6fda-4c85-b0cd-faf03baf9399"),
                             DistrictId = new Guid("d484cf5d-d07d-4e01-8aa4-c87747fa68fe"),
                             MethodId = new Guid("7875cc3c-a338-480a-98d8-8d3296575000"),
                             MinWeight = 0,
@@ -1275,7 +1275,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8e616f6a-286a-457f-8a54-37164119e0a2"),
+                            Id = new Guid("f188b7d5-6a0e-4a94-9539-24689910ebc1"),
                             DistrictId = new Guid("d484cf5d-d07d-4e01-8aa4-c87747fa68fe"),
                             MethodId = new Guid("96e1ef5b-916c-4885-ae5b-08a98541e92a"),
                             MinWeight = 101,
@@ -1283,7 +1283,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("adabd934-95cc-4606-95f3-74ec6a3037e1"),
+                            Id = new Guid("905be703-ac63-4ef0-9e64-f696404bec4f"),
                             DistrictId = new Guid("d484cf5d-d07d-4e01-8aa4-c87747fa68fe"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 101,
@@ -1291,7 +1291,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7b757f39-3503-4913-bae7-3cc42f66f797"),
+                            Id = new Guid("330ec2eb-9080-4a45-8223-8dc47624a66a"),
                             DistrictId = new Guid("05bb9082-20a8-4114-946b-cce72cedab19"),
                             MaxWeight = 70,
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
@@ -1300,7 +1300,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3a26e929-0b63-464a-8b4f-5729de9f8a9c"),
+                            Id = new Guid("64a5a01c-c576-4ea9-a5dc-349b2e4a837f"),
                             DistrictId = new Guid("05bb9082-20a8-4114-946b-cce72cedab19"),
                             MaxWeight = 100,
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
@@ -1309,7 +1309,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f74d1be7-fb25-4934-a158-5042b0e13538"),
+                            Id = new Guid("b9fcb6e7-a598-4ed7-9d4f-bfd86dd48b12"),
                             DistrictId = new Guid("05bb9082-20a8-4114-946b-cce72cedab19"),
                             MaxWeight = 300,
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
@@ -1318,7 +1318,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0b6706e8-7ff5-4390-b182-ec27b247d03e"),
+                            Id = new Guid("49e0259c-288b-4340-bdf1-4ce813490a27"),
                             DistrictId = new Guid("05bb9082-20a8-4114-946b-cce72cedab19"),
                             MaxWeight = 1500,
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
@@ -1327,7 +1327,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("10322e23-052f-44e8-81c4-046d65e133ef"),
+                            Id = new Guid("2e09c676-cb2b-4949-b7ad-42e880dae9ae"),
                             DistrictId = new Guid("05bb9082-20a8-4114-946b-cce72cedab19"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 1501,
@@ -1335,7 +1335,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3f01fbab-24ba-41cf-abe3-62f9b4695e6a"),
+                            Id = new Guid("ae61ab44-0e85-43bf-94d7-9a136de3df3d"),
                             DistrictId = new Guid("0c02aa0a-b0d4-477a-b4e9-0a5073d323bf"),
                             MaxWeight = 70,
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
@@ -1344,7 +1344,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9c1e9f02-2b2d-47f2-a73e-70630abb98a0"),
+                            Id = new Guid("54a43556-0a7a-4b4d-958f-028b9023930f"),
                             DistrictId = new Guid("0c02aa0a-b0d4-477a-b4e9-0a5073d323bf"),
                             MaxWeight = 100,
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
@@ -1353,7 +1353,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ff3eb7f3-770a-44bc-985c-081eb6d566e4"),
+                            Id = new Guid("ea6c3ff5-b256-4caa-9288-05fd71d59990"),
                             DistrictId = new Guid("0c02aa0a-b0d4-477a-b4e9-0a5073d323bf"),
                             MaxWeight = 300,
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
@@ -1362,7 +1362,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("835b908e-92bc-4b0a-a94f-d53d62879985"),
+                            Id = new Guid("ec8f7650-611b-4333-b6c1-8f0e7924944f"),
                             DistrictId = new Guid("0c02aa0a-b0d4-477a-b4e9-0a5073d323bf"),
                             MaxWeight = 1500,
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
@@ -1371,7 +1371,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3275e172-5a98-4870-a52f-ea7adeb101a8"),
+                            Id = new Guid("0a163a44-44f8-4e25-83f8-83a414e3acf8"),
                             DistrictId = new Guid("0c02aa0a-b0d4-477a-b4e9-0a5073d323bf"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 1501,
@@ -1379,7 +1379,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a950d9ce-c547-4cf3-a4b3-6167014d4ada"),
+                            Id = new Guid("02e7ddfa-e34f-4479-92bc-21ad9582194a"),
                             DistrictId = new Guid("34e425db-ff6c-4ab7-ac14-a1bd7a7c94a8"),
                             MaxWeight = 70,
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
@@ -1388,7 +1388,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("95a7dd82-5129-4563-b3e3-c70eaa1d9bf6"),
+                            Id = new Guid("39a5a90c-bb99-4108-b27f-0d6b1bff76a7"),
                             DistrictId = new Guid("34e425db-ff6c-4ab7-ac14-a1bd7a7c94a8"),
                             MaxWeight = 100,
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
@@ -1397,7 +1397,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("faea4165-53ba-47e6-9dc7-84e802573026"),
+                            Id = new Guid("5088e751-1014-4183-98c6-1ecdb3c8564d"),
                             DistrictId = new Guid("34e425db-ff6c-4ab7-ac14-a1bd7a7c94a8"),
                             MaxWeight = 300,
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
@@ -1406,7 +1406,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a39478c9-92c8-429d-8167-368fc2ac6cda"),
+                            Id = new Guid("e521c127-7906-45e0-b2a0-a056b04ea6c8"),
                             DistrictId = new Guid("34e425db-ff6c-4ab7-ac14-a1bd7a7c94a8"),
                             MaxWeight = 1500,
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
@@ -1415,7 +1415,7 @@ namespace MigrationsMySQL.Migrations
                         },
                         new
                         {
-                            Id = new Guid("dc4ad423-a4b6-4dd0-b714-7010cfeaea7c"),
+                            Id = new Guid("30768e6b-2a1d-47ff-a666-ad86c2ccca32"),
                             DistrictId = new Guid("34e425db-ff6c-4ab7-ac14-a1bd7a7c94a8"),
                             MethodId = new Guid("cbf432c2-fd9e-4618-9b8f-60be075beef1"),
                             MinWeight = 1501,
@@ -1442,7 +1442,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TransportMethods", (string)null);
+                    b.ToTable("TransportMethods");
 
                     b.HasData(
                         new
@@ -1555,7 +1555,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("TransportOrders", (string)null);
+                    b.ToTable("TransportOrders");
                 });
 
             modelBuilder.Entity("ShipbuData.TransportOrderItem", b =>
@@ -1564,27 +1564,26 @@ namespace MigrationsMySQL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasMaxLength(34)
-                        .HasColumnType("varchar(34)");
-
                     b.Property<string>("Image")
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
                     b.Property<Guid>("TransportOrderId")
                         .HasColumnType("char(36)");
+
+                    b.Property<float>("Weight")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
                     b.HasIndex("TransportOrderId");
 
-                    b.ToTable("TransportOrderItems", (string)null);
+                    b.ToTable("TransportOrderItems");
 
-                    b.HasDiscriminator<string>("Discriminator").HasValue("TransportOrderItem");
-
-                    b.UseTphMappingStrategy();
+                    b.UseTptMappingStrategy();
                 });
 
             modelBuilder.Entity("ShipbuData.TransportOrderItemContainerType", b =>
@@ -1612,7 +1611,7 @@ namespace MigrationsMySQL.Migrations
                     b.HasIndex("NameTr")
                         .IsUnique();
 
-                    b.ToTable("TransportOrderItemContainerTypes", (string)null);
+                    b.ToTable("TransportOrderItemContainerTypes");
                 });
 
             modelBuilder.Entity("ShipbuData.TransportOrderItemFeature", b =>
@@ -1663,25 +1662,7 @@ namespace MigrationsMySQL.Migrations
                     b.HasIndex("NameTr")
                         .IsUnique();
 
-                    b.ToTable("TransportOrderItemFeatures", (string)null);
-                });
-
-            modelBuilder.Entity("ShipbuData.TransportOrderItemFeatureValue", b =>
-                {
-                    b.Property<Guid>("TransportOrderItemFeatureId")
-                        .HasColumnType("char(36)");
-
-                    b.Property<Guid>("TransportOrderItemId")
-                        .HasColumnType("char(36)");
-
-                    b.Property<string>("Attachment")
-                        .HasColumnType("longtext");
-
-                    b.HasKey("TransportOrderItemFeatureId", "TransportOrderItemId");
-
-                    b.HasIndex("TransportOrderItemId");
-
-                    b.ToTable("TransportOrderItemFeatureValue", (string)null);
+                    b.ToTable("TransportOrderItemFeatures");
                 });
 
             modelBuilder.Entity("ShipbuData.TransportPayment", b =>
@@ -1703,7 +1684,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("TransportPayments", (string)null);
+                    b.ToTable("TransportPayments");
                 });
 
             modelBuilder.Entity("ShipbuData.TransportRegion", b =>
@@ -1731,7 +1712,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TransportRegions", (string)null);
+                    b.ToTable("TransportRegions");
 
                     b.HasData(
                         new
@@ -1802,7 +1783,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasIndex("RegionId");
 
-                    b.ToTable("TransportRegionMethod", (string)null);
+                    b.ToTable("TransportRegionMethod");
 
                     b.HasData(
                         new
@@ -1960,7 +1941,7 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TransportStaticPages", (string)null);
+                    b.ToTable("TransportStaticPages");
                 });
 
             modelBuilder.Entity("ShipbuData.User", b =>
@@ -2053,25 +2034,60 @@ namespace MigrationsMySQL.Migrations
 
                     b.HasIndex("TransportOrderItemsId");
 
-                    b.ToTable("TransportOrderItemTransportOrderItemFeature", (string)null);
+                    b.ToTable("TransportOrderItemTransportOrderItemFeature");
                 });
 
             modelBuilder.Entity("ShipbuData.TransportOrderItemContainer", b =>
                 {
                     b.HasBaseType("ShipbuData.TransportOrderItem");
 
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
                     b.Property<Guid>("TransportOrderItemContainerTypeId")
                         .HasColumnType("char(36)");
 
-                    b.Property<float>("Weight")
-                        .HasColumnType("float");
-
                     b.HasIndex("TransportOrderItemContainerTypeId");
 
-                    b.HasDiscriminator().HasValue("TransportOrderItemContainer");
+                    b.ToTable("TransportOrderItemContainers", (string)null);
+                });
+
+            modelBuilder.Entity("ShipbuData.TransportOrderItemPackage", b =>
+                {
+                    b.HasBaseType("ShipbuData.TransportOrderItem");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("longtext");
+
+                    b.Property<float>("Height")
+                        .HasColumnType("float");
+
+                    b.Property<float>("Length")
+                        .HasColumnType("float");
+
+                    b.Property<int>("Products")
+                        .HasColumnType("int");
+
+                    b.Property<float>("Width")
+                        .HasColumnType("float");
+
+                    b.ToTable("TransportOrderItemPackages", (string)null);
+                });
+
+            modelBuilder.Entity("ShipbuData.TransportOrderItemPallet", b =>
+                {
+                    b.HasBaseType("ShipbuData.TransportOrderItem");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("longtext");
+
+                    b.Property<float>("Height")
+                        .HasColumnType("float");
+
+                    b.Property<float>("Length")
+                        .HasColumnType("float");
+
+                    b.Property<float>("Width")
+                        .HasColumnType("float");
+
+                    b.ToTable("TransportOrderItemPallets", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -2201,25 +2217,6 @@ namespace MigrationsMySQL.Migrations
                     b.Navigation("TransportOrder");
                 });
 
-            modelBuilder.Entity("ShipbuData.TransportOrderItemFeatureValue", b =>
-                {
-                    b.HasOne("ShipbuData.TransportOrderItemFeature", "TransportOrderItemFeature")
-                        .WithMany("TransportOrderItemFeatureValues")
-                        .HasForeignKey("TransportOrderItemFeatureId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ShipbuData.TransportOrderItem", "TransportOrderItem")
-                        .WithMany("TransportOrderItemFeatureValues")
-                        .HasForeignKey("TransportOrderItemId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("TransportOrderItem");
-
-                    b.Navigation("TransportOrderItemFeature");
-                });
-
             modelBuilder.Entity("ShipbuData.TransportPayment", b =>
                 {
                     b.HasOne("ShipbuData.User", "User")
@@ -2268,6 +2265,12 @@ namespace MigrationsMySQL.Migrations
 
             modelBuilder.Entity("ShipbuData.TransportOrderItemContainer", b =>
                 {
+                    b.HasOne("ShipbuData.TransportOrderItem", null)
+                        .WithOne()
+                        .HasForeignKey("ShipbuData.TransportOrderItemContainer", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("ShipbuData.TransportOrderItemContainerType", "TransportOrderItemContainerType")
                         .WithMany("TransportOrderItemContainers")
                         .HasForeignKey("TransportOrderItemContainerTypeId")
@@ -2275,6 +2278,24 @@ namespace MigrationsMySQL.Migrations
                         .IsRequired();
 
                     b.Navigation("TransportOrderItemContainerType");
+                });
+
+            modelBuilder.Entity("ShipbuData.TransportOrderItemPackage", b =>
+                {
+                    b.HasOne("ShipbuData.TransportOrderItem", null)
+                        .WithOne()
+                        .HasForeignKey("ShipbuData.TransportOrderItemPackage", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ShipbuData.TransportOrderItemPallet", b =>
+                {
+                    b.HasOne("ShipbuData.TransportOrderItem", null)
+                        .WithOne()
+                        .HasForeignKey("ShipbuData.TransportOrderItemPallet", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ShipbuData.TransportDistrict", b =>
@@ -2297,19 +2318,9 @@ namespace MigrationsMySQL.Migrations
                     b.Navigation("TransportOrderItems");
                 });
 
-            modelBuilder.Entity("ShipbuData.TransportOrderItem", b =>
-                {
-                    b.Navigation("TransportOrderItemFeatureValues");
-                });
-
             modelBuilder.Entity("ShipbuData.TransportOrderItemContainerType", b =>
                 {
                     b.Navigation("TransportOrderItemContainers");
-                });
-
-            modelBuilder.Entity("ShipbuData.TransportOrderItemFeature", b =>
-                {
-                    b.Navigation("TransportOrderItemFeatureValues");
                 });
 
             modelBuilder.Entity("ShipbuData.TransportRegion", b =>

@@ -349,9 +349,9 @@ namespace Shipbu.Controllers
                         order.TransportOrderItems.Add(new TransportOrderItemPallet
                         {
                             Content = p.Contents,
-                            Height = 80,
+                            Height = p.Height!.Value,
                             Image = p.Image,
-                            Length = p.Length!.Value,
+                            Length = 80,
                             Quantity = p.Quantity,
                             Weight = p.Weight,
                             Width = 120,
