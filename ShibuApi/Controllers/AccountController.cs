@@ -149,7 +149,7 @@ namespace Shipbu.Controllers
             var user = await userManager.FindByIdAsync(model.UserId);
             if (user is null)
                 return BadRequest(model);
-            var result = await userManager.ResetPasswordAsync(user, model.Token, model.NewPassword);
+            var result = await userManager.ResetPasswordAsync(user, model.Token, model.Password);
             return result.Succeeded ? Ok() : BadRequest(result);
         }
 
@@ -211,8 +211,6 @@ namespace Shipbu.Controllers
             var token = await userManager.GeneratePasswordResetTokenAsync(user);
             var template = string.Format(System.IO.File.ReadAllText(Path.Combine(env.WebRootPath, "Templates", "ResetPassword.html")),
                 user!.Name,
-                configuration["Title"],
-                configuration["HostDomain"],
                 token
                 );
             var userEmail = user.UserName;
