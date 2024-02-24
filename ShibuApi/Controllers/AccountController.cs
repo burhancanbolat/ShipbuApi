@@ -89,6 +89,10 @@ namespace Shipbu.Controllers
                     var token = await GenerateTokenForUser(user);
                     return Ok(new { token, result });
                 }
+                else
+                {
+                    return Ok(new { result = new { Succeeded = false, IsBanned = true } });
+                }
             }
             return Ok(new { result });
         }

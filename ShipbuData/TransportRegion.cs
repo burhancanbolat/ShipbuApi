@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ShipbuData;
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
 namespace ShipbuData;
 
@@ -74,7 +75,7 @@ public class TransportDistrictEntityTypeConfiguration : IEntityTypeConfiguration
 
     public void Configure(EntityTypeBuilder<TransportDistrict> builder)
     {
-
+        
         builder
             .HasMany(p => p.TransportOrders)
             .WithOne(p => p.District)
@@ -173,12 +174,12 @@ public class TransportMethodEntityTypeConfiguration : IEntityTypeConfiguration<T
                 new TransportMethod { Id = Guid.Parse("{CBF432C2-FD9E-4618-9B8F-60BE075BEEF1}"), NameTr = "Hızlı Gemi + Ekspress", NameEn = "Sea Fast + Express", Enabled = true },
                 new TransportMethod { Id = Guid.Parse("{2ADD124B-9A78-4B78-96D1-523E658F77A4}"), NameTr = "Yavaş Gemi + TIR", NameEn = "Sea Slow + Truck", Enabled = true },
                 new TransportMethod { Id = Guid.Parse("{4F2FEBE8-3273-4086-89A4-0A0282F003A8}"), NameTr = "Hızlı Gemi + TIR", NameEn = "Sea Fast + Truck", Enabled = true },
-                new TransportMethod { Id = Guid.Parse("{730CD01E-FB25-4347-8932-2B4056252E73}"), NameTr = "Speed Boat", NameEn = "Fast Vessel", Enabled = true },
+                //new TransportMethod { Id = Guid.Parse("{730CD01E-FB25-4347-8932-2B4056252E73}"), NameTr = "Speed Boat", NameEn = "Fast Vessel", Enabled = true },
                 new TransportMethod { Id = Guid.Parse("{AF3E3B1A-06D9-413F-99AD-3378458BE832}"), NameTr = "TIR", NameEn = "Truck", Enabled = true },
                 new TransportMethod { Id = Guid.Parse("{A5FE9692-EF46-4376-919F-43AEAA0C07A0}"), NameTr = "Tren", NameEn = "Railway", Enabled = true },
                 new TransportMethod { Id = Guid.Parse("{C2A145A8-C7D9-4241-9D21-8BB4968C39CF}"), NameTr = "Gemi", NameEn = "Sea", Enabled = true },
                 new TransportMethod { Id = Guid.Parse("{1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD}"), NameTr = "Gemi + Sınırlı Zaman", NameEn = "Sea + Limited Time", Enabled = true },
-                new TransportMethod { Id = Guid.Parse("{C1637D89-CCB7-4A68-B382-40B4BB9E50D7}"), NameTr = "Gemi+Sınırlı Zaman+ TIR ", NameEn = "Fast Vessel+Truck+Limited Time ", Enabled = true }
+                new TransportMethod { Id = Guid.Parse("{C1637D89-CCB7-4A68-B382-40B4BB9E50D7}"), NameTr = "Gemi + Sınırlı Zaman + TIR", NameEn = "Fast Vessel+Truck+Limited Time ", Enabled = true }
 
             );
     }
@@ -211,24 +212,24 @@ public class TransportRegionMethodEntityTypeConfiguration : IEntityTypeConfigura
                 new TransportRegionMethod { RegionId = Guid.Parse("{C194434C-7A4D-4D70-98DF-1ECC78A333AA}"), MethodId = Guid.Parse("{7875CC3C-A338-480A-98D8-8D3296575000}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
                 new TransportRegionMethod { RegionId = Guid.Parse("{C194434C-7A4D-4D70-98DF-1ECC78A333AA}"), MethodId = Guid.Parse("{96E1EF5B-916C-4885-AE5B-08A98541E92A}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
                 new TransportRegionMethod { RegionId = Guid.Parse("{C194434C-7A4D-4D70-98DF-1ECC78A333AA}"), MethodId = Guid.Parse("{CBF432C2-FD9E-4618-9B8F-60BE075BEEF1}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
-                new TransportRegionMethod { RegionId = Guid.Parse("{C194434C-7A4D-4D70-98DF-1ECC78A333AA}"), MethodId = Guid.Parse("{730CD01E-FB25-4347-8932-2B4056252E73}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
+                //new TransportRegionMethod { RegionId = Guid.Parse("{C194434C-7A4D-4D70-98DF-1ECC78A333AA}"), MethodId = Guid.Parse("{730CD01E-FB25-4347-8932-2B4056252E73}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
                 //CANADA  
                 new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{7875CC3C-A338-480A-98D8-8D3296575000}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
                 new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{96E1EF5B-916C-4885-AE5B-08A98541E92A}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
-                new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{CBF432C2-FD9E-4618-9B8F-60BE075BEEF1}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
-                new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{730CD01E-FB25-4347-8932-2B4056252E73}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
-                new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{4F2FEBE8-3273-4086-89A4-0A0282F003A8}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
                 new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{2ADD124B-9A78-4B78-96D1-523E658F77A4}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },      
+                new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{CBF432C2-FD9E-4618-9B8F-60BE075BEEF1}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
+                new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{4F2FEBE8-3273-4086-89A4-0A0282F003A8}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
                 new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
                 new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{C1637D89-CCB7-4A68-B382-40B4BB9E50D7}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
+                //new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{730CD01E-FB25-4347-8932-2B4056252E73}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
 
                 //UK
                 new TransportRegionMethod { RegionId = Guid.Parse("{5D751653-BE94-44F4-AFBE-5BAF410AE321}"), MethodId = Guid.Parse("{7875CC3C-A338-480A-98D8-8D3296575000}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
-                new TransportRegionMethod { RegionId = Guid.Parse("{5D751653-BE94-44F4-AFBE-5BAF410AE321}"), MethodId = Guid.Parse("{96E1EF5B-916C-4885-AE5B-08A98541E92A}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
+                new TransportRegionMethod { RegionId = Guid.Parse("{5D751653-BE94-44F4-AFBE-5BAF410AE321}"), MethodId = Guid.Parse("{C2A145A8-C7D9-4241-9D21-8BB4968C39CF}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
                 new TransportRegionMethod { RegionId = Guid.Parse("{5D751653-BE94-44F4-AFBE-5BAF410AE321}"), MethodId = Guid.Parse("{AF3E3B1A-06D9-413F-99AD-3378458BE832}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
                 //Europe
                 new TransportRegionMethod { RegionId = Guid.Parse("{39887E51-8A46-42C1-B621-699D96326883}"), MethodId = Guid.Parse("{7875CC3C-A338-480A-98D8-8D3296575000}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
-                new TransportRegionMethod { RegionId = Guid.Parse("{39887E51-8A46-42C1-B621-699D96326883}"), MethodId = Guid.Parse("{96E1EF5B-916C-4885-AE5B-08A98541E92A}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
+                new TransportRegionMethod { RegionId = Guid.Parse("{39887E51-8A46-42C1-B621-699D96326883}"), MethodId = Guid.Parse("{C2A145A8-C7D9-4241-9D21-8BB4968C39CF}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
                 new TransportRegionMethod { RegionId = Guid.Parse("{39887E51-8A46-42C1-B621-699D96326883}"), MethodId = Guid.Parse("{A5FE9692-EF46-4376-919F-43AEAA0C07A0}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
                 new TransportRegionMethod { RegionId = Guid.Parse("{39887E51-8A46-42C1-B621-699D96326883}"), MethodId = Guid.Parse("{AF3E3B1A-06D9-413F-99AD-3378458BE832}"), Volume = 6000, ETAMin = 3, ETAMax = 5 }
 
@@ -383,13 +384,13 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
 
                 //UK SEA
-                //new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 23, MaxWeight = 45, Value = 1.97m },
-                //new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 46, MaxWeight = 70, Value = 1.83m },
-                //new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 71, MaxWeight = 100, Value = 1.61m },
-                //new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 101, MaxWeight = 300, Value = 1.40m },
-                //new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
-                //new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
-                //new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 23, MaxWeight = 45, Value = 1.97m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 46, MaxWeight = 70, Value = 1.83m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 71, MaxWeight = 100, Value = 1.61m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 101, MaxWeight = 300, Value = 1.40m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
 
                 //UK TRUCK
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 23, MaxWeight = 45, Value = 4.46m },

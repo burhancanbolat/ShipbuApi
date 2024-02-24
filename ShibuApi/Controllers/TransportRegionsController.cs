@@ -48,7 +48,16 @@ namespace ShipbuApi.Controllers
                 {
                     p.Id,
                     p.NameEn,
-                    p.NameTr
+                    p.NameTr,
+                    TransportRegionMethods = p.TransportRegionMethods.Select(q => new
+                    {
+                        MethodName = q.Method.NameTr,
+                        q.MethodId,
+                        q.RegionId,
+                        q.ETAMin,
+                        q.ETAMax,
+                        q.Volume
+                    })
                 })
                 .ToListAsync();
             return Ok(result);
@@ -70,7 +79,7 @@ namespace ShipbuApi.Controllers
                 .ToListAsync();
             return Ok(result);
         }
-        
+
         [HttpGet("districts/{regionId:guid}")]
         public async Task<IActionResult> GetDistricts(Guid regionId)
         {
@@ -100,7 +109,7 @@ namespace ShipbuApi.Controllers
                 .TransportFees
                 .AsNoTracking()
                 .Where(p => p.DistrictId == districtId && p.MethodId == methodId)
-                .OrderBy(p=>p.MinWeight)
+                .OrderBy(p => p.MinWeight)
                 .Select(p => new
                 {
                     p.Id,
@@ -124,6 +133,19 @@ namespace ShipbuApi.Controllers
             context.TransportFees.Update(result);
             await context.SaveChangesAsync();
             return Ok(result);
+        }
+
+        [HttpGet("updateeta/{regionId:guid}/{methodId:guid}/{etaMin:int}/{etaMax:int}")]
+        public async Task<IActionResult> UpdateETA(Guid regionId, Guid methodId, int etaMin, int etaMax)
+        {
+            var region = await context.TransportRegions.Include(p=>p.TransportRegionMethods).SingleOrDefaultAsync(p => p.Id == regionId)!;
+            var methods = region.TransportRegionMethods;
+            var item = methods.SingleOrDefault(p => p.MethodId == methodId)!;
+            item.ETAMin = etaMin;
+            item.ETAMax = etaMax;
+            context.TransportRegions.Update(region);
+            await context.SaveChangesAsync();
+            return Ok();
         }
 
     }
