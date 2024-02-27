@@ -275,9 +275,9 @@ namespace Shipbu.Controllers
         [HttpPost("transportoffers")]
         public async Task<IActionResult> GetTransportOffers(TransportOrderViewModel model)
         {
-
+            var originVolume = (await context.TransportRegions.SingleOrDefaultAsync(p => p.Id == model.Origin)).Volume;
             var transportVolumeWeight = configuration.GetValue<int>("TransportVolumeWeight");
-            var totalWeight = (decimal)(model.Items.Select(p => new { Desi = ((p.Width ?? 0 * p.Height ?? 0 * p.Length ?? 0) / transportVolumeWeight) * p.Quantity, Weight = p.Amount }).Sum(p => Math.Max(p.Desi, p.Weight)));
+            var totalWeight = (decimal)(model.Items.Select(p => new { Desi = ((p.Width ?? 0 * p.Height ?? 0 * p.Length ?? 0) / originVolume) * p.Quantity, Weight = p.Amount }).Sum(p => Math.Max(p.Desi, p.Weight)));
             var features = model.Items.SelectMany(p => p.Features).GroupBy(p => p.Id).Select(p => new { id = p.Key, fee = p.First().Fee, nameTr = p.First().NameTr, nameEn = p.First().NameEn, amount = p.First().Fee * totalWeight }).ToList();
             var featureAmount = features.Sum(p => p.fee) * totalWeight;
             var result = await context

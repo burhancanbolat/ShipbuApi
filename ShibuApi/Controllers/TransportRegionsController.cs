@@ -55,8 +55,7 @@ namespace ShipbuApi.Controllers
                         q.MethodId,
                         q.RegionId,
                         q.ETAMin,
-                        q.ETAMax,
-                        q.Volume
+                        q.ETAMax
                     })
                 })
                 .ToListAsync();
