@@ -75,7 +75,7 @@ public class TransportDistrictEntityTypeConfiguration : IEntityTypeConfiguration
 
     public void Configure(EntityTypeBuilder<TransportDistrict> builder)
     {
-        
+
         builder
             .HasMany(p => p.TransportOrders)
             .WithOne(p => p.District)
@@ -116,6 +116,28 @@ public class TransportDistrictEntityTypeConfiguration : IEntityTypeConfiguration
                 new TransportDistrict { Id = Guid.Parse("{DE1CFC73-52A1-4C72-AED7-1C67A588E436}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "Toronto YOO", NameEn = "Toronto YOO", IsAmazonDepot = true },
                 new TransportDistrict { Id = Guid.Parse("{BB88A4E3-A99F-45E4-A753-CB430B608A4F}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "Toronto YHM", NameEn = "Toronto YHM", IsAmazonDepot = true },
                 new TransportDistrict { Id = Guid.Parse("{A42EA92C-D563-4EB8-BD25-83A3AC1217DC}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "Vancouver YXX", NameEn = "Vancouver YXX", IsAmazonDepot = true },
+                // Yeni Amazon Depo  CANADA
+                new TransportDistrict { Id = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "British Columbia YVR2", NameEn = "British Columbia YVR2", IsAmazonDepot = true },
+                new TransportDistrict { Id = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "British Columbia YVR4", NameEn = "British Columbia YVR4", IsAmazonDepot = true },
+                new TransportDistrict { Id = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "Ontario L5N 1L8 YYZ1", NameEn = "Ontario L5N 1L8 YYZ1", IsAmazonDepot = true },
+                new TransportDistrict { Id = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "Ontario L9T 6Y9 YYZ2", NameEn = "Ontario L9T 6Y9 YYZ2", IsAmazonDepot = true },
+                new TransportDistrict { Id = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "Ontario L6Y 0B2 YYZ3", NameEn = "Ontario L6Y 0B2 YYZ3", IsAmazonDepot = true },
+                new TransportDistrict { Id = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "Ontario L6Y 0C9 YYZ4-YYZ6", NameEn = "Ontario  L6Y 0C9 YYZ4-YYZ6", IsAmazonDepot = true },
+                new TransportDistrict { Id = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "Ontario L7E 4L8 YYZ7", NameEn = "Ontario L7E 4L8 YYZ7", IsAmazonDepot = true },
+                new TransportDistrict { Id = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "Ontario L5R 3W PRTO", NameEn = "Ontario L5R 3W PRTO", IsAmazonDepot = true },
+                new TransportDistrict { Id = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "Ontario Canada K4N 1P6 YOW1 ", NameEn = "Ontario Canada K4N 1P6 YOW1 ", IsAmazonDepot = true },
+                new TransportDistrict { Id = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "Balzac, Alberta T4A 1C6 YYC1 ", NameEn = "Balzac, Alberta T4A 1C6 YYC1 ", IsAmazonDepot = true },
+                new TransportDistrict { Id = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "Leduc County, AB T6W 1A7 YEG1 ", NameEn = "Leduc County, AB T6W 1A7 YEG1 ", IsAmazonDepot = true },
+                new TransportDistrict { Id = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "Delta, BC V3M 5Y9 YVR2 ", NameEn = "Delta, BC V3M 5Y9 YVR2 ", IsAmazonDepot = true },
+                new TransportDistrict { Id = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "Montréal (Lachine) – Waze YUL2 ", NameEn = "Montréal (Lachine) – Waze YUL2 ", IsAmazonDepot = true },
+                new TransportDistrict { Id = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), Enabled = true, NameTr = "Toronto YYZ9 ", NameEn = "Toronto YYZ9 ", IsAmazonDepot = true },
+
+
+
+
+
+
+
                 //UK
                 new TransportDistrict { Id = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), RegionId = Guid.Parse("{5D751653-BE94-44F4-AFBE-5BAF410AE321}"), Enabled = true, NameTr = "İngiltere", NameEn = "UK", IsAmazonDepot = false },
                 //EUROPE
@@ -216,7 +238,7 @@ public class TransportRegionMethodEntityTypeConfiguration : IEntityTypeConfigura
                 //CANADA  
                 new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{7875CC3C-A338-480A-98D8-8D3296575000}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
                 new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{96E1EF5B-916C-4885-AE5B-08A98541E92A}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
-                new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{2ADD124B-9A78-4B78-96D1-523E658F77A4}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },      
+                new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{2ADD124B-9A78-4B78-96D1-523E658F77A4}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
                 new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{CBF432C2-FD9E-4618-9B8F-60BE075BEEF1}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
                 new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{4F2FEBE8-3273-4086-89A4-0A0282F003A8}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
                 new TransportRegionMethod { RegionId = Guid.Parse("{AAAA0D64-ABD7-4E96-AA49-35D4253E014F}"), MethodId = Guid.Parse("{1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD}"), Volume = 6000, ETAMin = 3, ETAMax = 5 },
@@ -269,7 +291,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
         builder
             .HasData(
 
-            //ABD
+                //ABD
 
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{05BB9082-20A8-4114-946B-CCE72CEDAB19}"), MethodId = Guid.Parse("{7875CC3C-A338-480A-98D8-8D3296575000}"), MinWeight = 0, MaxWeight = null, Value = 10m },
 
@@ -401,7 +423,11 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 501, MaxWeight = 999, Value = 3.67m },
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7A610F5-1FE9-41E2-8493-34424D982B9B}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 1000, MaxWeight = null, Value = 3.64m },
 
-                //CANADA AIR
+               //CANADA AIR
+
+              
+               
+
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{573DA713-55B6-4505-9BB0-1E033F7C47E5}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{637A3CF8-E91A-4E46-8CCF-D1BFCBAA19E3}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{82060812-B989-4340-BD2E-8840585A8ACF}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
@@ -415,7 +441,139 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{BB88A4E3-A99F-45E4-A753-CB430B608A4F}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A42EA92C-D563-4EB8-BD25-83A3AC1217DC}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
 
-                //CANADA SEA SLOW+ EXPRESS  
+                //CANADA YENİLER
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10m },
+
+                  //
+
+
+
+                  //CANADA SEA SLOW+ EXPRESS  
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
 
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{573DA713-55B6-4505-9BB0-1E033F7C47E5}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{573DA713-55B6-4505-9BB0-1E033F7C47E5}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
@@ -424,7 +582,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{573DA713-55B6-4505-9BB0-1E033F7C47E5}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{573DA713-55B6-4505-9BB0-1E033F7C47E5}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{573DA713-55B6-4505-9BB0-1E033F7C47E5}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
-               
+
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{82060812-B989-4340-BD2E-8840585A8ACF}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.47m },
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{82060812-B989-4340-BD2E-8840585A8ACF}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 1.90m },
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{82060812-B989-4340-BD2E-8840585A8ACF}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 71, MaxWeight = 100, Value = 1.83m },
@@ -464,7 +622,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FF9E1EE3-91CC-404F-AE3F-4A4C8AD891F7}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 301, MaxWeight = 500, Value = 1.68m },
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FF9E1EE3-91CC-404F-AE3F-4A4C8AD891F7}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 501, MaxWeight = 999, Value = 1.61m },
                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FF9E1EE3-91CC-404F-AE3F-4A4C8AD891F7}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.58m },
-                // AMAZONA GİTMİYORSA
+                 // AMAZONA GİTMİYORSA
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{431D73FB-827D-43C2-8EE3-98568D1CFCF8}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 23, MaxWeight = 45, Value = 2.76m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{431D73FB-827D-43C2-8EE3-98568D1CFCF8}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 46, MaxWeight = 70, Value = 2.19m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{431D73FB-827D-43C2-8EE3-98568D1CFCF8}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 71, MaxWeight = 100, Value = 2.12m },
@@ -474,7 +632,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{431D73FB-827D-43C2-8EE3-98568D1CFCF8}"), MethodId = Guid.Parse("96E1EF5B-916C-4885-AE5B-08A98541E92A"), MinWeight = 1000, MaxWeight = null, Value = 1.80m },
 
 
-                   //CANADA SEA SLOW + TRUCK
+                 //CANADA SEA SLOW + TRUCK
 
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{573DA713-55B6-4505-9BB0-1E033F7C47E5}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.29m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{573DA713-55B6-4505-9BB0-1E033F7C47E5}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.22m },
@@ -486,7 +644,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{637A3CF8-E91A-4E46-8CCF-D1BFCBAA19E3}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.15m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{637A3CF8-E91A-4E46-8CCF-D1BFCBAA19E3}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.12m },
 
-                 
+
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{9495DD9F-53C2-41C5-8680-34539A483A42}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.29m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{9495DD9F-53C2-41C5-8680-34539A483A42}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.22m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{9495DD9F-53C2-41C5-8680-34539A483A42}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.15m },
@@ -496,23 +654,100 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{545149AD-862B-4E00-A5D6-E3492D68463B}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.29m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{545149AD-862B-4E00-A5D6-E3492D68463B}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.22m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{545149AD-862B-4E00-A5D6-E3492D68463B}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.19m },
-               
+
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DE1CFC73-52A1-4C72-AED7-1C67A588E436}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.37m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DE1CFC73-52A1-4C72-AED7-1C67A588E436}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.29m },
-                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DE1CFC73-52A1-4C72-AED7-1C67A588E436}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.22m },               
-                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DE1CFC73-52A1-4C72-AED7-1C67A588E436}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.19m }, 
-                
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DE1CFC73-52A1-4C72-AED7-1C67A588E436}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.22m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DE1CFC73-52A1-4C72-AED7-1C67A588E436}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.19m },
+
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{BB88A4E3-A99F-45E4-A753-CB430B608A4F}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.37m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{BB88A4E3-A99F-45E4-A753-CB430B608A4F}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.29m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{BB88A4E3-A99F-45E4-A753-CB430B608A4F}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.22m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{BB88A4E3-A99F-45E4-A753-CB430B608A4F}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.19m },
-                
+
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{829F6814-B1A3-43F0-8D71-F2EA928E743B}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{829F6814-B1A3-43F0-8D71-F2EA928E743B}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.37m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{829F6814-B1A3-43F0-8D71-F2EA928E743B}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.29m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{829F6814-B1A3-43F0-8D71-F2EA928E743B}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.27m },
 
-                 //CANADA SEA FAST+EXPRESS
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("2ADD124B-9A78-4B78-96D1-523E658F77A4"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                 //CANADA SEA FAST+EXPRESS               
 
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{573DA713-55B6-4505-9BB0-1E033F7C47E5}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 23, MaxWeight = 45, Value = 2.66m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{573DA713-55B6-4505-9BB0-1E033F7C47E5}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 46, MaxWeight = 70, Value = 2.09m },
@@ -521,6 +756,120 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{573DA713-55B6-4505-9BB0-1E033F7C47E5}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{573DA713-55B6-4505-9BB0-1E033F7C47E5}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{573DA713-55B6-4505-9BB0-1E033F7C47E5}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 23, MaxWeight = 45, Value = 2.66m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 46, MaxWeight = 70, Value = 2.09m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 71, MaxWeight = 100, Value = 2.01m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 23, MaxWeight = 45, Value = 2.66m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 46, MaxWeight = 70, Value = 2.09m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 71, MaxWeight = 100, Value = 2.01m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 23, MaxWeight = 45, Value = 2.66m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 46, MaxWeight = 70, Value = 2.09m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 71, MaxWeight = 100, Value = 2.01m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 23, MaxWeight = 45, Value = 2.66m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 46, MaxWeight = 70, Value = 2.09m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 71, MaxWeight = 100, Value = 2.01m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 23, MaxWeight = 45, Value = 2.66m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 46, MaxWeight = 70, Value = 2.09m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 71, MaxWeight = 100, Value = 2.01m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 23, MaxWeight = 45, Value = 2.66m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 46, MaxWeight = 70, Value = 2.09m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 71, MaxWeight = 100, Value = 2.01m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 23, MaxWeight = 45, Value = 2.66m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 46, MaxWeight = 70, Value = 2.09m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 71, MaxWeight = 100, Value = 2.01m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 23, MaxWeight = 45, Value = 2.66m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 46, MaxWeight = 70, Value = 2.09m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 71, MaxWeight = 100, Value = 2.01m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 23, MaxWeight = 45, Value = 2.66m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 46, MaxWeight = 70, Value = 2.09m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 71, MaxWeight = 100, Value = 2.01m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 101, MaxWeight = 300, Value = 1.94m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 301, MaxWeight = 500, Value = 1.87m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 23, MaxWeight = 45, Value = 2.33m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 46, MaxWeight = 70, Value = 1.76m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 71, MaxWeight = 100, Value = 1.68m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 101, MaxWeight = 300, Value = 1.44m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 301, MaxWeight = 500, Value = 1.32m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 501, MaxWeight = 999, Value = 1.25m },
+                new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 1000, MaxWeight = null, Value = 1.22m },
+
 
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{637A3CF8-E91A-4E46-8CCF-D1BFCBAA19E3}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 23, MaxWeight = 45, Value = 2.95m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{637A3CF8-E91A-4E46-8CCF-D1BFCBAA19E3}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 46, MaxWeight = 70, Value = 2.37m },
@@ -571,7 +920,81 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{431D73FB-827D-43C2-8EE3-98568D1CFCF8}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 501, MaxWeight = 999, Value = 2.13m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{431D73FB-827D-43C2-8EE3-98568D1CFCF8}"), MethodId = Guid.Parse("CBF432C2-FD9E-4618-9B8F-60BE075BEEF1"), MinWeight = 1000, MaxWeight = null, Value = 2.10m },
 
-                  //SEA FAST + TRUCK
+                      //SEA FAST + TRUCK
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 101, MaxWeight = 300, Value = 1.73m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 301, MaxWeight = 500, Value = 1.65m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 501, MaxWeight = 999, Value = 1.58m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 1000, MaxWeight = null, Value = 1.55m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 101, MaxWeight = 300, Value = 1.73m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 301, MaxWeight = 500, Value = 1.65m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 501, MaxWeight = 999, Value = 1.58m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 1000, MaxWeight = null, Value = 1.55m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 101, MaxWeight = 300, Value = 1.73m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 301, MaxWeight = 500, Value = 1.65m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 501, MaxWeight = 999, Value = 1.58m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 1000, MaxWeight = null, Value = 1.55m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 101, MaxWeight = 300, Value = 1.73m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 301, MaxWeight = 500, Value = 1.65m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 501, MaxWeight = 999, Value = 1.58m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 1000, MaxWeight = null, Value = 1.55m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 101, MaxWeight = 300, Value = 1.73m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 301, MaxWeight = 500, Value = 1.65m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 501, MaxWeight = 999, Value = 1.58m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 1000, MaxWeight = null, Value = 1.55m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 101, MaxWeight = 300, Value = 1.73m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 301, MaxWeight = 500, Value = 1.65m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 501, MaxWeight = 999, Value = 1.58m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 1000, MaxWeight = null, Value = 1.55m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 101, MaxWeight = 300, Value = 1.73m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 301, MaxWeight = 500, Value = 1.65m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 501, MaxWeight = 999, Value = 1.58m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 1000, MaxWeight = null, Value = 1.55m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 101, MaxWeight = 300, Value = 1.73m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 301, MaxWeight = 500, Value = 1.65m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 501, MaxWeight = 999, Value = 1.58m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 1000, MaxWeight = null, Value = 1.55m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 101, MaxWeight = 300, Value = 1.73m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 301, MaxWeight = 500, Value = 1.65m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 501, MaxWeight = 999, Value = 1.58m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 1000, MaxWeight = null, Value = 1.55m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 101, MaxWeight = 300, Value = 1.73m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 301, MaxWeight = 500, Value = 1.65m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 501, MaxWeight = 999, Value = 1.58m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 1000, MaxWeight = null, Value = 1.55m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 101, MaxWeight = 300, Value = 1.73m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 301, MaxWeight = 500, Value = 1.65m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 501, MaxWeight = 999, Value = 1.58m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 1000, MaxWeight = null, Value = 1.55m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 101, MaxWeight = 300, Value = 1.73m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 301, MaxWeight = 500, Value = 1.65m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 501, MaxWeight = 999, Value = 1.58m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 1000, MaxWeight = null, Value = 1.55m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 101, MaxWeight = 300, Value = 1.73m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 301, MaxWeight = 500, Value = 1.65m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 501, MaxWeight = 999, Value = 1.58m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 1000, MaxWeight = null, Value = 1.55m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 101, MaxWeight = 300, Value = 1.73m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 301, MaxWeight = 500, Value = 1.65m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 501, MaxWeight = 999, Value = 1.58m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 1000, MaxWeight = null, Value = 1.55m },
+
+
+
+
 
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{573DA713-55B6-4505-9BB0-1E033F7C47E5}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 101, MaxWeight = 300, Value = 1.73m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{573DA713-55B6-4505-9BB0-1E033F7C47E5}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 301, MaxWeight = 500, Value = 1.65m },
@@ -613,12 +1036,12 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{BB88A4E3-A99F-45E4-A753-CB430B608A4F}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 501, MaxWeight = 999, Value = 1.73m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{BB88A4E3-A99F-45E4-A753-CB430B608A4F}"), MethodId = Guid.Parse("4F2FEBE8-3273-4086-89A4-0A0282F003A8"), MinWeight = 1000, MaxWeight = null, Value = 1.70m },
 
-                  //SEA LIMITED  TIME
+                 //SEA LIMITED  TIME
 
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{545149AD-862B-4E00-A5D6-E3492D68463B}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 23, MaxWeight = 45, Value = 3.45m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{545149AD-862B-4E00-A5D6-E3492D68463B}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 46, MaxWeight = 70, Value = 3.31m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{545149AD-862B-4E00-A5D6-E3492D68463B}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 71, MaxWeight = 100, Value = 2.81m },
-                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{545149AD-862B-4E00-A5D6-E3492D68463B}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 101, MaxWeight = 300, Value =2.73m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{545149AD-862B-4E00-A5D6-E3492D68463B}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 101, MaxWeight = 300, Value = 2.73m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{545149AD-862B-4E00-A5D6-E3492D68463B}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 301, MaxWeight = 500, Value = 2.66m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{545149AD-862B-4E00-A5D6-E3492D68463B}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 501, MaxWeight = 999, Value = 2.59m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{545149AD-862B-4E00-A5D6-E3492D68463B}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 1000, MaxWeight = null, Value = 2.56m },
@@ -630,7 +1053,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DE1CFC73-52A1-4C72-AED7-1C67A588E436}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 301, MaxWeight = 500, Value = 2.66m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DE1CFC73-52A1-4C72-AED7-1C67A588E436}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 501, MaxWeight = 999, Value = 2.59m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DE1CFC73-52A1-4C72-AED7-1C67A588E436}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 1000, MaxWeight = null, Value = 2.56m },
-                
+
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{BB88A4E3-A99F-45E4-A753-CB430B608A4F}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 23, MaxWeight = 45, Value = 3.74m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{BB88A4E3-A99F-45E4-A753-CB430B608A4F}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 46, MaxWeight = 70, Value = 3.60m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{BB88A4E3-A99F-45E4-A753-CB430B608A4F}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 71, MaxWeight = 100, Value = 3.09m },
@@ -679,7 +1102,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A42EA92C-D563-4EB8-BD25-83A3AC1217DC}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 501, MaxWeight = 999, Value = 3.02m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A42EA92C-D563-4EB8-BD25-83A3AC1217DC}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 1000, MaxWeight = null, Value = 2.99m },
 
-                  //AMAZONA GİTMİYORSA
+                 //AMAZONA GİTMİYORSA
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{431D73FB-827D-43C2-8EE3-98568D1CFCF8}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 23, MaxWeight = 45, Value = 4.32m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{431D73FB-827D-43C2-8EE3-98568D1CFCF8}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 46, MaxWeight = 70, Value = 4.17m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{431D73FB-827D-43C2-8EE3-98568D1CFCF8}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 71, MaxWeight = 100, Value = 3.67m },
@@ -688,7 +1111,82 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{431D73FB-827D-43C2-8EE3-98568D1CFCF8}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 501, MaxWeight = 999, Value = 3.09m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{431D73FB-827D-43C2-8EE3-98568D1CFCF8}"), MethodId = Guid.Parse("1EE2BA7B-97D2-4A3A-9B16-8B88563E91AD"), MinWeight = 1000, MaxWeight = null, Value = 3.06m },
 
-                  //SEA  FAST VESSEL+LIMITED TIME+TRUCK
+                 //SEA  FAST VESSEL+LIMITED TIME+TRUCK
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 101, MaxWeight = 300, Value = 2.45m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 301, MaxWeight = 500, Value = 2.37m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 501, MaxWeight = 999, Value = 2.30m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{32D1B488-73D7-41F5-A1FD-641041F8144D}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 1000, MaxWeight = null, Value = 2.27m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 101, MaxWeight = 300, Value = 2.45m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 301, MaxWeight = 500, Value = 2.37m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 501, MaxWeight = 999, Value = 2.30m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C8B980AF-CC6C-4F4B-9520-C976454D5C81}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 1000, MaxWeight = null, Value = 2.27m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 101, MaxWeight = 300, Value = 2.45m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 301, MaxWeight = 500, Value = 2.37m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 501, MaxWeight = 999, Value = 2.30m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7108B599-3916-41B4-8A3A-9A13014421B6}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 1000, MaxWeight = null, Value = 2.27m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 101, MaxWeight = 300, Value = 2.45m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 301, MaxWeight = 500, Value = 2.37m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 501, MaxWeight = 999, Value = 2.30m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{5C53B65C-4BFB-4B3E-A49C-C61EE219204F}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 1000, MaxWeight = null, Value = 2.27m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 101, MaxWeight = 300, Value = 2.45m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 301, MaxWeight = 500, Value = 2.37m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 501, MaxWeight = 999, Value = 2.30m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{F0EFA456-CD90-4783-A75E-08E602259182}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 1000, MaxWeight = null, Value = 2.27m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 101, MaxWeight = 300, Value = 2.45m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 301, MaxWeight = 500, Value = 2.37m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 501, MaxWeight = 999, Value = 2.30m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{A4480B57-775D-46FC-9482-83AC8C0A1A6D}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 1000, MaxWeight = null, Value = 2.27m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 101, MaxWeight = 300, Value = 2.45m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 301, MaxWeight = 500, Value = 2.37m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 501, MaxWeight = 999, Value = 2.30m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CBF7DF95-3B02-4F6D-B46D-5845121BBA8B}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 1000, MaxWeight = null, Value = 2.27m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 101, MaxWeight = 300, Value = 2.45m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 301, MaxWeight = 500, Value = 2.37m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 501, MaxWeight = 999, Value = 2.30m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{44F51AA3-F033-4DFD-AE91-5404B99CED75}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 1000, MaxWeight = null, Value = 2.27m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 101, MaxWeight = 300, Value = 2.45m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 301, MaxWeight = 500, Value = 2.37m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 501, MaxWeight = 999, Value = 2.30m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{C43EA434-7FF0-4282-92CB-B16339ECFA73}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 1000, MaxWeight = null, Value = 2.27m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 101, MaxWeight = 300, Value = 2.45m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 301, MaxWeight = 500, Value = 2.37m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 501, MaxWeight = 999, Value = 2.30m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CA29F053-832D-4477-B30C-039D085000E5}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 1000, MaxWeight = null, Value = 2.27m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 101, MaxWeight = 300, Value = 2.45m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 301, MaxWeight = 500, Value = 2.37m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 501, MaxWeight = 999, Value = 2.30m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{31084077-3241-4490-89DD-9908441A2F6E}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 1000, MaxWeight = null, Value = 2.27m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 101, MaxWeight = 300, Value = 2.45m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 301, MaxWeight = 500, Value = 2.37m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 501, MaxWeight = 999, Value = 2.30m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{38AA7336-5832-47C6-8F49-F38719A92475}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 1000, MaxWeight = null, Value = 2.27m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 101, MaxWeight = 300, Value = 2.45m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 301, MaxWeight = 500, Value = 2.37m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 501, MaxWeight = 999, Value = 2.30m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{FEB4EB90-9EB7-4DD3-896E-B0AAEB438240}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 1000, MaxWeight = null, Value = 2.27m },
+
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 101, MaxWeight = 300, Value = 2.45m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 301, MaxWeight = 500, Value = 2.37m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 501, MaxWeight = 999, Value = 2.30m },
+                 new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DB8EDF7B-09F7-41AC-85BF-8DFD6C663A69}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 1000, MaxWeight = null, Value = 2.27m },
+
+
+
+
+
 
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{545149AD-862B-4E00-A5D6-E3492D68463B}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 101, MaxWeight = 300, Value = 2.45m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{545149AD-862B-4E00-A5D6-E3492D68463B}"), MethodId = Guid.Parse("C1637D89-CCB7-4A68-B382-40B4BB9E50D7"), MinWeight = 301, MaxWeight = 500, Value = 2.37m },
@@ -740,7 +1238,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{803E5FB5-2A8F-4E42-A544-071B0B9FCECF}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10.0m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{3A52E207-C517-49A2-98D4-2998F29F1ECD}"), MethodId = Guid.Parse("7875CC3C-A338-480A-98D8-8D3296575000"), MinWeight = 0, MaxWeight = null, Value = 10.0m },
 
-                  //EUROPE SEA
+                 //EUROPE SEA
 
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CB7FA78D-6DE7-4838-9E54-C279BEA798B0}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 23, MaxWeight = 45, Value = 2.52m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CB7FA78D-6DE7-4838-9E54-C279BEA798B0}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 46, MaxWeight = 70, Value = 2.32m },
@@ -813,7 +1311,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7DDB170B-5696-4ABE-A5A8-B6424A966BA9}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 301, MaxWeight = 500, Value = 1.88m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7DDB170B-5696-4ABE-A5A8-B6424A966BA9}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 501, MaxWeight = 999, Value = 1.80m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7DDB170B-5696-4ABE-A5A8-B6424A966BA9}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 1000, MaxWeight = null, Value = 1.77m },
-                     
+
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{52E63491-43B4-47CC-B53E-8384AAC7C07C}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 23, MaxWeight = 45, Value = 2.81m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{52E63491-43B4-47CC-B53E-8384AAC7C07C}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 46, MaxWeight = 70, Value = 2.59m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{52E63491-43B4-47CC-B53E-8384AAC7C07C}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 71, MaxWeight = 100, Value = 2.24m },
@@ -829,7 +1327,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{58A45E41-A7FE-4DEC-9A8E-3BBF38455E5F}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 301, MaxWeight = 500, Value = 2.02m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{58A45E41-A7FE-4DEC-9A8E-3BBF38455E5F}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 501, MaxWeight = 999, Value = 1.95m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{58A45E41-A7FE-4DEC-9A8E-3BBF38455E5F}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 1000, MaxWeight = null, Value = 1.92m },
-                         
+
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{EE896FE1-1434-4136-A70E-D2C9FA49D902}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 23, MaxWeight = 45, Value = 2.95m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{EE896FE1-1434-4136-A70E-D2C9FA49D902}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 46, MaxWeight = 70, Value = 2.74m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{EE896FE1-1434-4136-A70E-D2C9FA49D902}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 71, MaxWeight = 100, Value = 2.38m },
@@ -845,7 +1343,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{3C4FEDCC-EAEB-4480-8574-C759E9AA2F9D}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 301, MaxWeight = 500, Value = 2.02m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{3C4FEDCC-EAEB-4480-8574-C759E9AA2F9D}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 501, MaxWeight = 999, Value = 1.95m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{3C4FEDCC-EAEB-4480-8574-C759E9AA2F9D}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 1000, MaxWeight = null, Value = 1.92m },
-                     
+
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DA5D4F5E-79AC-4B69-B0F5-CF027053EC8C}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 23, MaxWeight = 45, Value = 2.95m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DA5D4F5E-79AC-4B69-B0F5-CF027053EC8C}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 46, MaxWeight = 70, Value = 2.74m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DA5D4F5E-79AC-4B69-B0F5-CF027053EC8C}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 71, MaxWeight = 100, Value = 2.38m },
@@ -853,7 +1351,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DA5D4F5E-79AC-4B69-B0F5-CF027053EC8C}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 301, MaxWeight = 500, Value = 2.02m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DA5D4F5E-79AC-4B69-B0F5-CF027053EC8C}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 501, MaxWeight = 999, Value = 1.95m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{DA5D4F5E-79AC-4B69-B0F5-CF027053EC8C}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 1000, MaxWeight = null, Value = 1.92m },
-                         
+
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{BC3767BC-68D7-400D-AE61-707FC3BB5878}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 23, MaxWeight = 45, Value = 2.95m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{BC3767BC-68D7-400D-AE61-707FC3BB5878}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 46, MaxWeight = 70, Value = 2.74m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{BC3767BC-68D7-400D-AE61-707FC3BB5878}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 71, MaxWeight = 100, Value = 2.38m },
@@ -861,7 +1359,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{BC3767BC-68D7-400D-AE61-707FC3BB5878}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 301, MaxWeight = 500, Value = 2.02m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{BC3767BC-68D7-400D-AE61-707FC3BB5878}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 501, MaxWeight = 999, Value = 1.95m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{BC3767BC-68D7-400D-AE61-707FC3BB5878}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 1000, MaxWeight = null, Value = 1.92m },
-                        
+
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{291C8B1E-1EB6-4BC0-B714-86E79ED31316}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 23, MaxWeight = 45, Value = 2.95m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{291C8B1E-1EB6-4BC0-B714-86E79ED31316}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 46, MaxWeight = 70, Value = 2.74m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{291C8B1E-1EB6-4BC0-B714-86E79ED31316}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 71, MaxWeight = 100, Value = 2.38m },
@@ -869,7 +1367,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{291C8B1E-1EB6-4BC0-B714-86E79ED31316}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 301, MaxWeight = 500, Value = 2.02m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{291C8B1E-1EB6-4BC0-B714-86E79ED31316}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 501, MaxWeight = 999, Value = 1.95m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{291C8B1E-1EB6-4BC0-B714-86E79ED31316}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 1000, MaxWeight = null, Value = 1.92m },
-                         
+
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{6DE69DB5-E0A5-4FE3-95A9-DF3721F50D0B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 23, MaxWeight = 45, Value = 2.95m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{6DE69DB5-E0A5-4FE3-95A9-DF3721F50D0B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 46, MaxWeight = 70, Value = 2.74m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{6DE69DB5-E0A5-4FE3-95A9-DF3721F50D0B}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 71, MaxWeight = 100, Value = 2.38m },
@@ -927,7 +1425,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{18351822-A469-408C-B8A9-F17DBFF1020A}"), MethodId = Guid.Parse("C2A145A8-C7D9-4241-9D21-8BB4968C39CF"), MinWeight = 1000, MaxWeight = null, Value = 2.06m },
 
 
-                  // EUROPE TRUCK
+                 // EUROPE TRUCK
 
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CB7FA78D-6DE7-4838-9E54-C279BEA798B0}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 23, MaxWeight = 45, Value = 3.74m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CB7FA78D-6DE7-4838-9E54-C279BEA798B0}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 46, MaxWeight = 70, Value = 3.02m },
@@ -968,7 +1466,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{660348C5-B814-42BF-A1B9-DF56696F3C75}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 301, MaxWeight = 500, Value = 3.02m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{660348C5-B814-42BF-A1B9-DF56696F3C75}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 501, MaxWeight = 999, Value = 2.88m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{660348C5-B814-42BF-A1B9-DF56696F3C75}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 1000, MaxWeight = null, Value = 2.85m },
-                           
+
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{8B08542B-6C77-4D8E-8D54-329CEEC6C1E1}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 23, MaxWeight = 45, Value = 4.24m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{8B08542B-6C77-4D8E-8D54-329CEEC6C1E1}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 46, MaxWeight = 70, Value = 3.38m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{8B08542B-6C77-4D8E-8D54-329CEEC6C1E1}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 71, MaxWeight = 100, Value = 3.09m },
@@ -976,7 +1474,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{8B08542B-6C77-4D8E-8D54-329CEEC6C1E1}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 301, MaxWeight = 500, Value = 3.02m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{8B08542B-6C77-4D8E-8D54-329CEEC6C1E1}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 501, MaxWeight = 999, Value = 2.88m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{8B08542B-6C77-4D8E-8D54-329CEEC6C1E1}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 1000, MaxWeight = null, Value = 2.85m },
-                          
+
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7DDB170B-5696-4ABE-A5A8-B6424A966BA9}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 23, MaxWeight = 45, Value = 4.24m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7DDB170B-5696-4ABE-A5A8-B6424A966BA9}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 46, MaxWeight = 70, Value = 3.38m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{7DDB170B-5696-4ABE-A5A8-B6424A966BA9}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 71, MaxWeight = 100, Value = 3.09m },
@@ -1138,7 +1636,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{3A52E207-C517-49A2-98D4-2998F29F1ECD}"), MethodId = Guid.Parse("AF3E3B1A-06D9-413F-99AD-3378458BE832"), MinWeight = 1000, MaxWeight = null, Value = 3.21m },
 
 
-                                //EUROPE TRAİN
+                 //EUROPE TRAİN
 
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CB7FA78D-6DE7-4838-9E54-C279BEA798B0}"), MethodId = Guid.Parse("A5FE9692-EF46-4376-919F-43AEAA0C07A0"), MinWeight = 23, MaxWeight = 45, Value = 2.52m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{CB7FA78D-6DE7-4838-9E54-C279BEA798B0}"), MethodId = Guid.Parse("A5FE9692-EF46-4376-919F-43AEAA0C07A0"), MinWeight = 46, MaxWeight = 70, Value = 2.30m },
@@ -1233,7 +1731,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{58A45E41-A7FE-4DEC-9A8E-3BBF38455E5F}"), MethodId = Guid.Parse("A5FE9692-EF46-4376-919F-43AEAA0C07A0"), MinWeight = 301, MaxWeight = 500, Value = 2.09m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{58A45E41-A7FE-4DEC-9A8E-3BBF38455E5F}"), MethodId = Guid.Parse("A5FE9692-EF46-4376-919F-43AEAA0C07A0"), MinWeight = 501, MaxWeight = 999, Value = 1.94m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{58A45E41-A7FE-4DEC-9A8E-3BBF38455E5F}"), MethodId = Guid.Parse("A5FE9692-EF46-4376-919F-43AEAA0C07A0"), MinWeight = 1000, MaxWeight = null, Value = 1.91m },
-               
+
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{EE896FE1-1434-4136-A70E-D2C9FA49D902}"), MethodId = Guid.Parse("A5FE9692-EF46-4376-919F-43AEAA0C07A0"), MinWeight = 23, MaxWeight = 45, Value = 2.95m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{EE896FE1-1434-4136-A70E-D2C9FA49D902}"), MethodId = Guid.Parse("A5FE9692-EF46-4376-919F-43AEAA0C07A0"), MinWeight = 46, MaxWeight = 70, Value = 2.73m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{EE896FE1-1434-4136-A70E-D2C9FA49D902}"), MethodId = Guid.Parse("A5FE9692-EF46-4376-919F-43AEAA0C07A0"), MinWeight = 71, MaxWeight = 100, Value = 2.37m },
@@ -1283,7 +1781,7 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{6DE69DB5-E0A5-4FE3-95A9-DF3721F50D0B}"), MethodId = Guid.Parse("A5FE9692-EF46-4376-919F-43AEAA0C07A0"), MinWeight = 1000, MaxWeight = null, Value = 1.91m },
 
 
-           
+
 
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7B21A66-1C15-49CF-9FF9-C8B3455BA57D}"), MethodId = Guid.Parse("A5FE9692-EF46-4376-919F-43AEAA0C07A0"), MinWeight = 23, MaxWeight = 45, Value = 3.31m },
                  new TransportFee { Id = Guid.NewGuid(), DistrictId = Guid.Parse("{E7B21A66-1C15-49CF-9FF9-C8B3455BA57D}"), MethodId = Guid.Parse("A5FE9692-EF46-4376-919F-43AEAA0C07A0"), MinWeight = 46, MaxWeight = 70, Value = 3.09m },
@@ -1336,6 +1834,6 @@ public class TransportFeeEntityTypeConfiguration : IEntityTypeConfiguration<Tran
 
 
 
-                 ); 
+                 );
     }
 }
