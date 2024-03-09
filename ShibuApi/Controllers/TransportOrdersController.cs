@@ -55,7 +55,8 @@ namespace ShipbuApi.Controllers
                     p.TrackingNumber,
                     p.User!.UserName,
                     UserGivenName = p.User.Name,
-                    p.UserId
+                    p.UserId,
+                    p.AdminUser
                 });
 
             options.PrimaryKey = new[] { "Id" };
@@ -163,6 +164,17 @@ namespace ShipbuApi.Controllers
             order.Status = TransportOrderStatus.Shipped;
             order.ShippingNumber = shippingNumber;
             order.TrackingNumber = trackingNumber;
+            context.TransportOrders.Update(order);
+            await context.SaveChangesAsync();
+            return Ok();
+        }
+        [HttpGet("updateorderadmins/{id}/{selectedAdminId}")]
+        public async Task<IActionResult> updateorderadmins(Guid id, string selectedAdminId )
+        {
+            var order = await context.TransportOrders.FindAsync(id);
+            
+            order.AdminUser = selectedAdminId;
+          
             context.TransportOrders.Update(order);
             await context.SaveChangesAsync();
             return Ok();

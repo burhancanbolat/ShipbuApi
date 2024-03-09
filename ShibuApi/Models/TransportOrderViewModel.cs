@@ -11,6 +11,7 @@ public class TransportOrderViewModel
     public string? PhoneNumber { get; set; }
     public Guid TransportFeeId { get; set; }
     public decimal Price { get; set; }
+    public string? AdminUser { get; set; }
     public TransportOrderDistrict District { get; set; }
 }
 

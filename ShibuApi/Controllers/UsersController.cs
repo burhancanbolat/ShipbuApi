@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ShipbuApi.Models;
 using ShipbuApi.Models.Data;
 using ShipbuData;
 
@@ -42,6 +43,7 @@ namespace ShipbuApi.Controllers
                     p.DateCreated,
                     p.Email,
                     p.Enabled,
+                    p.PhoneNumber,
                 })
                 .OrderBy(p => p.Name);
 
@@ -78,8 +80,24 @@ namespace ShipbuApi.Controllers
             await context.SaveChangesAsync();
             return Ok();
         }
+        [HttpGet("getadminusers")]
+        [Authorize(Roles = "Administrators")]
+        public async Task<IActionResult> GetAdminUsers()
+        {
+           
+            var usersInRole = await userManager.GetUsersInRoleAsync("Administrators");
 
+            
+            var userModels = usersInRole.Select(u => new UserModel
+            {
+                Id = u.Id,
+                UserName = u.UserName,
 
+               
+            }).ToList();
+
+            return Ok(userModels);
+        }
 
     }
 }

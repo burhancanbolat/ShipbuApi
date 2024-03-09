@@ -13,10 +13,12 @@ public class TransportOrder
     public Guid Id { get; set; }
     public DateTime Date { get; set; }
     public Guid UserId { get; set; }
+    public string? AdminUser { get; set; }
     public string? Address { get; set; }
     public string? PhoneNumber { get; set; }
     public string? Name { get; set; }
     public decimal Price { get; set; }
+
     public Guid OriginId { get; set; }
     public Guid DestinationId { get; set; }
     public Guid TransportFeeId { get; set; }

@@ -243,7 +243,9 @@ namespace Shipbu.Controllers
                 UserName = model.UserName,
                 DateCreated = DateTime.UtcNow,
                 EmailConfirmed = false,
-                Enabled = true
+                Enabled = true,
+                PhoneNumber= model.PhoneNumber
+                
             };
 
             var result = await userManager.CreateAsync(user, model.Password);
@@ -325,6 +327,8 @@ namespace Shipbu.Controllers
                 PhoneNumber = model.PhoneNumber,
                 UserId = userId,
                 Status = TransportOrderStatus.Offer,
+                AdminUser="mehmet",
+
                 TransportOrderItems = new List<TransportOrderItem>()
             };
 
